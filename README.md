@@ -1,2 +1,5 @@
-# fedora_everything_config
-Configuration of Fedora Everything for personal use
+# Steps to configure Fedora Everything
+
+## Boot Loader (GRUB) 
+## File System (btrfs)
+## Desktop Environment (KDE Plasma)
