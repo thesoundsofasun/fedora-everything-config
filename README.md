@@ -9,17 +9,25 @@
 #### File Explorer - "dolphin"
 #### Screen Manager - "kscreen"
 #### Network Manager - "plasma-nm"
-#### Audio Manager for Pipewire - plasma-pa
+#### Audio Manager for Pipewire - plasma-pa 
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
 ```
+#### Enabling KDE Plasma:
+```
+sudo systemctl set-default graphical.target
+```
+#### Enabling Plasma Login Manager:
+```
+sudo systemctl enable plasmalogin
+```
 ## Essential Packages:
-Terminal Emulator - "alacritty"
+#### Terminal Emulator - "alacritty"
 ```
 sudo dnf install alacritty
 ```
 ### Audio Setup:
-Multimedia Framework - "pipewire-pulseaudio"
-```
-sudo dnf install pipewire-pulseaudio
-```
+
+
+### Essential Applications:
+#### Web Browser - "firefox"
