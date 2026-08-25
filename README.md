@@ -24,6 +24,13 @@ sudo systemctl set-default graphical.target
 sudo systemctl enable plasmalogin
 ```
 --------------------------------------------------------------------------
+## Package Managers:
+#### - Flatpak
+- Install Flatpak
+```
+sudo dnf install flatpak
+```
+
 ## Essential Packages:
 #### - Password Manager - "keepassxc"
 ```
@@ -33,10 +40,13 @@ sudo dnf install keepassxc
 ```
 sudo dnf install konsole
 ```
-
+#### - Text Editor - "kate"
+```
+sudo dnf install kate
+```
 #### - Web Browser - "firefox"
 ```
-sudo dnf install Firefox
+sudo dnf install firefox
 ```
 ## Compatibility Packages
 #### - AppImage support - "fuse" and "fuse-libs"
@@ -48,7 +58,7 @@ sudo dnf install fuse fuse-libs
 ```
 sudo dnf install keepassxc
 ```
-#### - File Sharing - Local Send (AppImage)
+#### - File Sharing - Local Send (Flatpak)
 - Install [Local Send App Image](https://localsend.org/download?os=linux)
 - Open Firewall ports for 53317/tcp and 53317/udp
 ```
