@@ -31,3 +31,26 @@ sudo dnf install konsole
 
 ### Essential Applications:
 #### Web Browser - "firefox"
+
+# Clean uninstalling packages:
+## 1st step: Uninstallation
+```
+sudo dnf remove "package"
+```
+## 2nd step: Removing orphaned dependencies
+```
+sudo dnf autoremove
+```
+## 3rd step: Removing residual files from /home directory
+### Find the files with a name of the package that gets deleted:
+```
+find ~ iname "*package*"
+```
+### Delete the files that were found in /home directory 
+```
+rm -rf "package"
+```
+## 4th step: Audit if there files that were installed outside of home directory
+```
+sudo find / -iname "*alacritty*" 2>/dev/null
+```
