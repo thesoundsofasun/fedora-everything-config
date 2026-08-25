@@ -34,7 +34,7 @@ sudo dnf install flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
-- Enable RPM Fusion (free and non free)
+- Enable RPM Fusion (free and nonfree)
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
@@ -60,6 +60,11 @@ sudo dnf install firefox
 #### - AppImage support - "fuse" and "fuse-libs"
 ```
 sudo dnf install fuse fuse-libs
+```
+#### - Multimedia Codec
+- Swap FFMPEG free with FFMPEG full
+```
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
 ```
 ## Utilities
 #### - Password manager - "keepassxc"
