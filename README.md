@@ -34,6 +34,11 @@ sudo dnf install flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
+- Enable RPM Fusion (free and non free)
+```
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
 ## Essential Packages:
 #### - Password Manager - "keepassxc"
 ```
@@ -74,24 +79,24 @@ sudo firewall-cmd --reload
 ### Audio Setup:
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
-## 1st step: Uninstallation
+### 1st step: Uninstallation
 ```
 sudo dnf remove "package"
 ```
-## 2nd step: Removing orphaned dependencies
+### 2nd step: Removing orphaned dependencies
 ```
 sudo dnf autoremove
 ```
-## 3rd step: Removing residual files from /home directory
-### - Find the files with a name of the package that gets deleted:
+### 3rd step: Removing residual files from /home directory
+#### - Find the files with a name of the package that gets deleted:
 ```
 find ~ iname "*package*"
 ```
-### - Delete the files that were found in /home directory 
+#### - Delete the files that were found in /home directory 
 ```
 rm -rf "package"
 ```
-## 4th step: Audit if there files that were installed outside of home directory
+### 4th step: Audit if there files that were installed outside of home directory
 ```
 sudo find / -iname "*alacritty*" 2>/dev/null
 ```
