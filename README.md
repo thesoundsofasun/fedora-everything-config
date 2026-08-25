@@ -22,9 +22,9 @@ sudo systemctl set-default graphical.target
 sudo systemctl enable plasmalogin
 ```
 ## Essential Packages:
-#### Terminal Emulator - "alacritty"
+#### Terminal Emulator - "konsole"
 ```
-sudo dnf install alacritty
+sudo dnf install konsole
 ```
 ### Audio Setup:
 
