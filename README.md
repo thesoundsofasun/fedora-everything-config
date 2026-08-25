@@ -61,12 +61,23 @@ sudo dnf install firefox
 ```
 sudo dnf install fuse fuse-libs
 ```
+
+#### - Multimedia
+- MPV Media Player (RPM)
+```
+sudo dnf install mpv
+```
+
 #### - Multimedia Codec
-- Swap FFMPEG free with FFMPEG full
+- Swap FFMPEG free with FFMPEG full (RPM)
 ```
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing
 ```
 ## Utilities
+#### - Archivator - "ark"
+```
+sudo dnf install ark
+```
 #### - Password manager - "keepassxc"
 ```
 sudo dnf install keepassxc
@@ -80,6 +91,10 @@ flatpak install flathub org.localsend.localsend_app
 sudo firewall-cmd --permanent --add-port=53317/udp
 sudo firewall-cmd --permanent --add-port=53317/tcp
 sudo firewall-cmd --reload
+```
+#### - Screenshot - "spectacle"
+```
+sudo dnf install spectacle
 ```
 ### Audio Setup:
 --------------------------------------------------------------------------
