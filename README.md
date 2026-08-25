@@ -38,13 +38,24 @@ sudo dnf install konsole
 ```
 sudo dnf install Firefox
 ```
+## Compatibility Packages
+#### - AppImage support - "fuse" and "fuse-libs"
+```
+sudo dnf install fuse fuse-libs
+```
 ## Utilities
 #### - Password manager - "keepassxc"
 ```
 sudo dnf install keepassxc
 ```
-#### - File Sharing - Local Send (appimage)
-
+#### - File Sharing - Local Send (AppImage)
+- Install [Local Send App Image](https://localsend.org/download?os=linux)
+- Open Firewall ports for 53317/tcp and 53317/udp
+```
+sudo firewall-cmd --permanent --add-port=53317/udp
+sudo firewall-cmd --permanent --add-port=53317/tcp
+sudo firewall-cmd --reload
+```
 ### Audio Setup:
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
