@@ -30,7 +30,10 @@ sudo systemctl enable plasmalogin
 ```
 sudo dnf install flatpak
 ```
-
+- Enable Flathub Repository
+```
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
 ## Essential Packages:
 #### - Password Manager - "keepassxc"
 ```
@@ -58,8 +61,10 @@ sudo dnf install fuse fuse-libs
 ```
 sudo dnf install keepassxc
 ```
-#### - File Sharing - Local Send (Flatpak)
-- Install [Local Send App Image](https://localsend.org/download?os=linux)
+#### - File Sharing - Local Send (Flatpak (Flathub))
+```
+flatpak install flathub org.localsend.localsend_app
+```
 - Open Firewall ports for 53317/tcp and 53317/udp
 ```
 sudo firewall-cmd --permanent --add-port=53317/udp
