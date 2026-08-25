@@ -1,37 +1,52 @@
-# Steps to configure Fedora Everything
-
-## Boot Loader (GRUB) 
-## File System (btrfs)
+# Fedora Config
+--------------------------------------------------------------------------
+## System settings
+#### - Boot Loader (GRUB)
+#### - File System (btrfs)
+--------------------------------------------------------------------------
 ## Desktop Environment (KDE Plasma)
 ### Packages:
-#### Desktop - "plasma-desktop"
-#### Login Manager - "plasma-login-manager"
-#### File Explorer - "dolphin"
-#### Screen Manager - "kscreen"
-#### Network Manager - "plasma-nm"
-#### Audio Manager for Pipewire - plasma-pa 
+#### - Desktop - "plasma-desktop"
+#### - Login Manager - "plasma-login-manager"
+#### - File Explorer - "dolphin"
+#### - Screen Manager - "kscreen"
+#### - Network Manager - "plasma-nm"
+#### - Audio Manager for Pipewire - plasma-pa 
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
 ```
-#### Enabling KDE Plasma:
+#### - Enabling KDE Plasma:
 ```
 sudo systemctl set-default graphical.target
 ```
-#### Enabling Plasma Login Manager:
+#### - Enabling Plasma Login Manager:
 ```
 sudo systemctl enable plasmalogin
 ```
+--------------------------------------------------------------------------
 ## Essential Packages:
-#### Terminal Emulator - "konsole"
+#### - Password Manager - "keepassxc"
+```
+sudo dnf install keepassxc
+```
+#### - Terminal Emulator - "konsole"
 ```
 sudo dnf install konsole
 ```
+
+#### - Web Browser - "firefox"
+```
+sudo dnf install Firefox
+```
+## Utilities
+#### - Password manager - "keepassxc"
+```
+sudo dnf install keepassxc
+```
+#### - File Sharing - Local Send (appimage)
+
 ### Audio Setup:
-
-
-### Essential Applications:
-#### Web Browser - "firefox"
-
+--------------------------------------------------------------------------
 # Clean uninstalling packages:
 ## 1st step: Uninstallation
 ```
@@ -42,11 +57,11 @@ sudo dnf remove "package"
 sudo dnf autoremove
 ```
 ## 3rd step: Removing residual files from /home directory
-### Find the files with a name of the package that gets deleted:
+### - Find the files with a name of the package that gets deleted:
 ```
 find ~ iname "*package*"
 ```
-### Delete the files that were found in /home directory 
+### - Delete the files that were found in /home directory 
 ```
 rm -rf "package"
 ```
