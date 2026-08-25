@@ -11,7 +11,7 @@
 #### - File Explorer - "dolphin"
 #### - Screen Manager - "kscreen"
 #### - Network Manager - "plasma-nm"
-#### - Audio Manager for Pipewire - plasma-pa 
+#### - Audio Manager for Pipewire - "plasma-pa" 
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
 ```
