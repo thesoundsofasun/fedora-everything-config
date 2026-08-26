@@ -72,15 +72,9 @@ flatpak install flathub io.mpv.Mpv -y
 ```
 sudo dnf install fluidsynth
 ```
-- Install configuration files for MPV Player
-```
-https://github.com/thesoundsofasun/mpv-custom-build/archive/refs/heads/main.zip
-```
-- Drop mpv.conf and input.conf to ~/.var/app/io.mpv.Mpv/config/mpv/
-- Drop script files to ~/.var/app/io.mpv.Mpv/config/mpv/scripts
-- Drop fonts to ~/.var/app/io.mpv.Mpv/config/mpv/fonts
-- Drop "midi-synth" folder to ~/.var/app/io.mpv.Mpv/config/mpv/
-- Allow MPV to interact with desktop
+- [DOWNLOAD](https://github.com/thesoundsofasun/mpv-custom-build/releases/download/latest/mpv-player-config-linux.zip) config files
+- Extract archive and drop files and folders from the "config" folder into ~/.var/app/io.mpv.Mpv/config/mpv/ directory
+##### Allow MPV to interact with desktop:
 ```
 flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
 ```
