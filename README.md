@@ -67,9 +67,16 @@ sudo dnf install fuse fuse-libs
 ```
 flatpak install flathub io.mpv.Mpv -y
 ```
-- Install config files to ~/.var/app/io.mpv.Mpv/config/mpv/
+- Drop mpv.conf and input.conf to ~/.var/app/io.mpv.Mpv/config/mpv/
+- Drop script files to ~/.var/app/io.mpv.Mpv/config/mpv/scripts
+- Drop fonts to ~/.var/app/io.mpv.Mpv/config/mpv/fonts
+- Drop "midi-synth" folder to ~/.var/app/io.mpv.Mpv/config/mpv/
 ```
 https://github.com/thesoundsofasun/mpv-custom-build/archive/refs/heads/main.zip
+```
+- Install FluidSynth for MIDI playback support
+```
+sudo dnf install fluidsynth
 ```
 
 #### - Multimedia Codec
