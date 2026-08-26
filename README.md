@@ -63,9 +63,13 @@ sudo dnf install fuse fuse-libs
 ```
 
 #### - Multimedia
-- MPV Media Player (RPM)
+##### MPV Media Player (Flatpak)
 ```
-sudo dnf install mpv
+flatpak install flathub io.mpv.Mpv -y
+```
+- Install config files to ~/.var/app/io.mpv.Mpv/config/mpv/
+```
+https://github.com/thesoundsofasun/mpv-custom-build/archive/refs/heads/main.zip
 ```
 
 #### - Multimedia Codec
