@@ -1,4 +1,4 @@
-# Fedora Config
+<img width="1145" height="181" alt="{5879DDD8-FECF-430C-AE61-ED6524D43ED9}" src="https://github.com/user-attachments/assets/3454f037-9f8f-445c-a282-b492071e4c95" /># Fedora Config
 --------------------------------------------------------------------------
 ## System settings
 #### - Boot Loader (GRUB)
@@ -65,12 +65,12 @@ sudo dnf install fuse fuse-libs
 ```
 sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
-#### - Multimedia
-##### qView Image Viewer
+## - Multimedia
+#### qView Image Viewer
 ```
 sudo dnf install qview
 ```
-##### MPV Media Player
+#### MPV Media Player
 - Install MPV Media Player from Flathub
 ```
 flatpak install flathub io.mpv.Mpv -y
@@ -90,6 +90,17 @@ flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
 - Swap FFMPEG free with FFMPEG full (RPM)
 ```
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
+
+## Office Suite
+#### OnlyOffice
+- Add OnlyOffice repository
+```
+sudo yum install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
+```
+- Install OnlyOffice
+```
+sudo yum install onlyoffice-desktopeditors -y
 ```
 ## Utilities
 #### - Archivator - "ark"
