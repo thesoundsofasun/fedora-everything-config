@@ -1,4 +1,4 @@
-<img width="1145" height="181" alt="{5879DDD8-FECF-430C-AE61-ED6524D43ED9}" src="https://github.com/user-attachments/assets/3454f037-9f8f-445c-a282-b492071e4c95" /># Fedora Config
+# Fedora Config
 --------------------------------------------------------------------------
 ## System settings
 #### - Boot Loader (GRUB)
