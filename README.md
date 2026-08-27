@@ -63,9 +63,13 @@ sudo dnf install fuse fuse-libs
 ```
 #### - HEIC/HEIF formats support
 ```
-sudo dnf install qt-heif-image-plugin
+sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
 #### - Multimedia
+##### qView Image Viewer
+```
+sudo dnf install qview
+```
 ##### MPV Media Player
 - Install MPV Media Player from Flathub
 ```
