@@ -61,7 +61,10 @@ sudo dnf install firefox
 ```
 sudo dnf install fuse fuse-libs
 ```
-
+#### - HEIC/HEIF formats support
+```
+sudo dnf install qt-heif-image-plugin
+```
 #### - Multimedia
 ##### MPV Media Player
 - Install MPV Media Player from Flathub
