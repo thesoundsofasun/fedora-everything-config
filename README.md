@@ -23,6 +23,11 @@ sudo systemctl set-default graphical.target
 ```
 sudo systemctl enable plasmalogin
 ```
+#### - Login Manager configurations:
+- Display 24 hour time format in login screen
+```
+echo 'LC_TIME="en_GB.UTF-8"' | sudo tee -a /etc/locale.conf
+```
 --------------------------------------------------------------------------
 ## Package Managers:
 #### - Flatpak
