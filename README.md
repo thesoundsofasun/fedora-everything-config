@@ -117,10 +117,6 @@ sudo yum install onlyoffice-desktopeditors -y
 ```
 sudo dnf install ark
 ```
-#### - Password manager - "keepassxc"
-```
-sudo dnf install keepassxc
-```
 #### - File Sharing - Local Send (Flatpak (Flathub))
 ```
 flatpak install flathub org.localsend.localsend_app
@@ -131,10 +127,21 @@ sudo firewall-cmd --permanent --add-port=53317/udp
 sudo firewall-cmd --permanent --add-port=53317/tcp
 sudo firewall-cmd --reload
 ```
+
+#### - Password manager - "keepassxc"
+```
+sudo dnf install keepassxc
+```
+
 #### - Screenshot - "spectacle"
 ```
 sudo dnf install spectacle
 ```
+#### System Monitoring - "btop"
+```
+sudo dnf install btop
+```
+
 ### Audio Setup:
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
