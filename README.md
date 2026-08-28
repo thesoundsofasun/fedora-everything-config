@@ -53,7 +53,12 @@ sudo dnf install keepassxc
 ```
 sudo dnf install konsole
 ```
-#### - Text Editor - "kate"
+#### - Text Editors
+- Micro (Terminal Text Editor)
+```
+sudo dnf install micro
+```
+- Kate
 ```
 sudo dnf install kate
 ```
