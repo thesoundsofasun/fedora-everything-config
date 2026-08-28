@@ -117,6 +117,10 @@ sudo yum install onlyoffice-desktopeditors -y
 ```
 sudo dnf install ark
 ```
+#### - Pipewire Graph Manager
+```
+sudo dnf install qpwgraph
+```
 #### - File Sharing - Local Send (Flatpak (Flathub))
 ```
 flatpak install flathub org.localsend.localsend_app
@@ -141,8 +145,6 @@ sudo dnf install spectacle
 ```
 sudo dnf install btop
 ```
-
-### Audio Setup:
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
 ### 1st step: Uninstallation
