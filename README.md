@@ -1,17 +1,16 @@
 # Fedora Config
---------------------------------------------------------------------------
+
 ## System settings
 #### - Boot Loader (GRUB)
-#### - File System (btrfs)
+#### - File System (ext4) - 1 GiB
 --------------------------------------------------------------------------
 ## Desktop Environment (KDE Plasma)
-### Packages:
-#### - Desktop - "plasma-desktop"
-#### - Login Manager - "plasma-login-manager"
-#### - File Explorer - "dolphin"
-#### - Screen Manager - "kscreen"
-#### - Network Manager - "plasma-nm"
-#### - Audio Manager for Pipewire - "plasma-pa" 
+#### - Plasma Desktop (Desktop)
+#### - Plasma Login Manager (Login Manager)
+#### - Dolphin - (File Explorer)
+#### - KScreen - (Screen Manager)
+#### - PlasmaNM - (Network Manager)
+#### - PlasmaPA - (Audio Manager for Pipewire) 
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
 ```
@@ -22,11 +21,6 @@ sudo systemctl set-default graphical.target
 #### - Enabling Plasma Login Manager:
 ```
 sudo systemctl enable plasmalogin
-```
-#### - Login Manager configurations:
-- Display 24 hour time format in login screen
-```
-echo 'LC_TIME="en_GB.UTF-8"' | sudo tee -a /etc/locale.conf
 ```
 --------------------------------------------------------------------------
 ## Package Managers:
@@ -43,30 +37,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
-
-## Essential Packages:
-#### - Password Manager - "keepassxc"
-```
-sudo dnf install keepassxc
-```
-#### - Terminal Emulator - "konsole"
-```
-sudo dnf install konsole
-```
-#### - Text Editors
-- Micro (Terminal Text Editor)
-```
-sudo dnf install micro
-```
-- Kate
-```
-sudo dnf install kate
-```
-#### - Web Browser - "firefox"
-```
-sudo dnf install firefox
-```
-## Compatibility Packages
+--------------------------------------------------------------------------
+# Compatibility Packages
 #### - AppImage support - "fuse" and "fuse-libs"
 ```
 sudo dnf install fuse fuse-libs
@@ -75,12 +47,28 @@ sudo dnf install fuse fuse-libs
 ```
 sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
-## - Multimedia
-#### qView Image Viewer
+#### - Multimedia formats support
+- Swap FFMPEG free with FFMPEG full (RPM)
+```
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
+--------------------------------------------------------------------------
+## Graphics
+#### - Blender (3D Redactor)
+```
+sudo dnf install blender
+```
+## Internet
+#### - Firefox (Web Browser)
+```
+sudo dnf install firefox
+```
+## Multimedia
+#### - qView (Image Viewer)
 ```
 sudo dnf install qview
 ```
-#### MPV Media Player
+#### - MPV (Media Player)
 - Install MPV Media Player from Flathub
 ```
 flatpak install flathub io.mpv.Mpv -y
@@ -93,35 +81,37 @@ sudo dnf install fluidsynth
 - Extract archive and drop files and folders from the "config" folder into ~/.var/app/io.mpv.Mpv/config/mpv/ directory
 ##### Allow MPV to interact with desktop:
 ```
-flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
+sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
 ```
-
-#### - Multimedia Codec
-- Swap FFMPEG free with FFMPEG full (RPM)
-```
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing
-```
-
-## Office Suite
-#### OnlyOffice
+## Office
+#### - OnlyOffice (Office Suite)
 - Add OnlyOffice repository
 ```
-sudo yum install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
+sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
 ```
 - Install OnlyOffice
 ```
-sudo yum install onlyoffice-desktopeditors -y
+sudo dnf install onlyoffice-desktopeditors -y
+```
+## Text Editors
+#### - Micro (Terminal Text Editor)
+```
+sudo dnf install micro
+```
+#### - Kate (GUI Text Editor)
+```
+sudo dnf install kate
 ```
 ## Utilities
-#### - Archivator - "ark"
+#### - Ark (Archivator)
 ```
 sudo dnf install ark
 ```
-#### - Pipewire Graph Manager
+#### - qpwgraph (Pipewire Graph Manager)
 ```
 sudo dnf install qpwgraph
 ```
-#### - File Sharing - Local Send (Flatpak (Flathub))
+#### - Local Send (File Sharing) (Flatpak (Flathub))
 ```
 flatpak install flathub org.localsend.localsend_app
 ```
@@ -132,19 +122,24 @@ sudo firewall-cmd --permanent --add-port=53317/tcp
 sudo firewall-cmd --reload
 ```
 
-#### - Password manager - "keepassxc"
+#### - KeePassXC - (Password manager)
 ```
 sudo dnf install keepassxc
 ```
 
-#### - Screenshot - "spectacle"
+#### - Spectacle - (Screenshot application)
 ```
 sudo dnf install spectacle
 ```
-#### System Monitoring - "btop"
+#### - System Monitor (System Resource Monitoring)
 ```
-sudo dnf install btop
+sudo dnf install plasma-systemmonitor
 ```
+#### - Terminal Emulator (Konsole)
+```
+sudo dnf install konsole
+```
+
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
 ### 1st step: Uninstallation
