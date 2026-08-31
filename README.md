@@ -23,7 +23,7 @@ sudo systemctl set-default graphical.target
 sudo systemctl enable plasmalogin
 ```
 --------------------------------------------------------------------------
-## Package Managers:
+## Package Managers
 #### - Flatpak
 - Install Flatpak
 ```
@@ -148,17 +148,17 @@ sudo dnf install plasma-systemmonitor
 
 
 --------------------------------------------------------------------------
-# Clean uninstalling packages:
-### 1st step: Uninstallation
+## Clean uninstalling packages
+#### 1st step: Uninstallation
 ```
 sudo dnf remove "package"
 ```
-### 2nd step: Removing orphaned dependencies
+#### 2nd step: Removing orphaned dependencies
 ```
 sudo dnf autoremove
 ```
-### 3rd step: Removing residual files from /home directory
-#### - Find the files with a name of the package that gets deleted:
+#### 3rd step: Removing residual files from /home directory
+- Find the files with a name of the package that gets deleted:
 ```
 find ~ iname "*package*"
 ```
