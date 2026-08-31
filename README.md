@@ -121,10 +121,17 @@ sudo firewall-cmd --permanent --add-port=53317/udp
 sudo firewall-cmd --permanent --add-port=53317/tcp
 sudo firewall-cmd --reload
 ```
-
 #### - KeePassXC - (Password manager)
 ```
 sudo dnf install keepassxc
+```
+#### - Konsole (Terminal Emulator)
+```
+sudo dnf install konsole
+```
+#### - OBS Studio (Screen Recorder)
+```
+sudo dnf install obs
 ```
 
 #### - Spectacle - (Screenshot application)
@@ -135,10 +142,7 @@ sudo dnf install spectacle
 ```
 sudo dnf install plasma-systemmonitor
 ```
-#### - Terminal Emulator (Konsole)
-```
-sudo dnf install konsole
-```
+
 
 --------------------------------------------------------------------------
 # Clean uninstalling packages:
