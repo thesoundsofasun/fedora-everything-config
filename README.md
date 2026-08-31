@@ -38,7 +38,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 --------------------------------------------------------------------------
-# Compatibility Packages
+## Compatibility
 #### - AppImage support - "fuse" and "fuse-libs"
 ```
 sudo dnf install fuse fuse-libs
