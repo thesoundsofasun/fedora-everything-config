@@ -133,8 +133,11 @@ sudo dnf install konsole
 ```
 sudo dnf install obs
 ```
-
-#### - Spectacle - (Screenshot application)
+#### - qBittorrent (Torrent Downloader)
+```
+sudo dnf install qbittorrent
+```
+#### - Spectacle - (Screenshot Application)
 ```
 sudo dnf install spectacle
 ```
