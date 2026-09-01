@@ -148,14 +148,14 @@ sudo dnf install plasma-systemmonitor
 
 
 --------------------------------------------------------------------------
-## Bash Scripts
+## Custom bash Scripts
 #### Find all files in "/" directory with exception of system ones
 ```
 echo "alias findr='find / -path /proc -prune -o -path /sys -prune -o -path /dev -prune -o -path /run -prune -o -print 2>/dev/null | while read -r file; do if ! rpm -qf \"\$file\" &>/dev/null; then echo \"\$file\"; fi; done | grep -i'" >> ~/.bashrc && source ~/.bashrc
 
 source ~/.bashrc
 ```
-
+--------------------------------------------------------------------------
 
 ## Clean uninstalling packages
 #### 1st step: Uninstallation
