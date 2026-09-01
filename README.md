@@ -26,17 +26,17 @@ sudo systemctl enable plasmalogin
 ## Package Managers
 #### - Flatpak
 - Install Flatpak
-```
-sudo dnf install flatpak
-```
+  ```
+  sudo dnf install flatpak
+  ```
 - Enable Flathub Repository
-```
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-```
+  ```
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  ```
 - Enable RPM Fusion (free and nonfree)
-```
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
+  ```
+  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-    $(rpm -E %fedora).noarch.rpm
+  ```
 --------------------------------------------------------------------------
 ## Compatibility
 #### - AppImage support - "fuse" and "fuse-libs"
@@ -49,9 +49,9 @@ sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
 #### - Multimedia formats support
 - Swap FFMPEG free with FFMPEG full (RPM)
-```
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing
-```
+  ```
+  sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+  ```
 --------------------------------------------------------------------------
 ## Graphics
 #### - Blender (3D Redactor)
@@ -70,13 +70,13 @@ sudo dnf install qview
 ```
 #### - MPV (Media Player)
 - Install MPV Media Player from Flathub
-```
-flatpak install flathub io.mpv.Mpv -y
-```
+  ```
+  flatpak install flathub io.mpv.Mpv -y
+  ```
 - Install FluidSynth for MIDI playback support
-```
-sudo dnf install fluidsynth
-```
+  ```
+  sudo dnf install fluidsynth
+  ```
 - [DOWNLOAD](https://github.com/thesoundsofasun/mpv-custom-build/releases/download/latest/mpv-player-config-linux.zip) config files
 - Extract archive and drop files and folders from the "config" folder into ~/.var/app/io.mpv.Mpv/config/mpv/ directory
 ##### Allow MPV to interact with desktop:
@@ -86,13 +86,13 @@ sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
 ## Office
 #### - OnlyOffice (Office Suite)
 - Add OnlyOffice repository
-```
-sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
-```
+  ```
+  sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
+  ```
 - Install OnlyOffice
-```
-sudo dnf install onlyoffice-desktopeditors -y
-```
+  ```
+  sudo dnf install onlyoffice-desktopeditors -y
+  ```
 ## Text Editors
 #### - Micro (Terminal Text Editor)
 ```
@@ -116,11 +116,11 @@ sudo dnf install qpwgraph
 flatpak install flathub org.localsend.localsend_app
 ```
 - Open Firewall ports for 53317/tcp and 53317/udp
-```
-sudo firewall-cmd --permanent --add-port=53317/udp
-sudo firewall-cmd --permanent --add-port=53317/tcp
-sudo firewall-cmd --reload
-```
+  ```
+  sudo firewall-cmd --permanent --add-port=53317/udp
+  sudo firewall-cmd --permanent --add-port=53317/tcp
+  sudo firewall-cmd --reload
+  ```
 #### - KeePassXC - (Password manager)
 ```
 sudo dnf install keepassxc
@@ -151,22 +151,26 @@ sudo dnf install plasma-systemmonitor
 ## Clean uninstalling packages
 #### 1st step: Uninstallation
 ```
-sudo dnf remove "package"
+sudo dnf autoremove "package"
 ```
 #### 2nd step: Removing orphaned dependencies
 ```
 sudo dnf autoremove
 ```
-#### 3rd step: Removing residual files from /home directory
+#### 3rd step: Removing residual files
 - Find the files with a name of the package that gets deleted:
-```
-find ~ iname "*package*"
-```
-#### - Delete the files that were found in /home directory 
-```
-rm -rf "package"
-```
-### 4th step: Audit if there files that were installed outside of home directory
-```
-sudo find / -iname "*alacritty*" 2>/dev/null
-```
+  - Scans "/" directory and shows all files
+    ```
+    sudo find / -iname "*package*" 2>/dev/null
+    ```
+  - Scans "/" directory and shows all files excluding system files
+    ```
+    find / -path /proc -prune -o -path /sys -prune -o -path /dev -prune -o -path /run -prune -o \
+    -iname "*package*" -print 2>/dev/null | while read -r file; do \
+    if ! rpm -qf "$file" &>/dev/null; then echo "$file"; fi; \
+    done
+    ```
+- Delete the files that were found (exluding the ones that are not part of the targeted package)
+  ```
+  rm -rf /path
+  ```
