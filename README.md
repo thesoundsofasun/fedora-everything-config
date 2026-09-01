@@ -83,6 +83,16 @@ sudo dnf install qview
   ```
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
   ```
+## Music Production
+#### - Reaper (DAW)
+ - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
+ - Extract "REAPER" folder from downloaded archive into ~/Applications
+ - Make REAPER fully Portable
+ ```
+ ~/Applications/REAPER/reaper -cfgfile ~/Applications/REAPER/reaper.ini
+ ```
+#### - VCV Rack (Modular Workstation)
+
 ## Office
 #### - OnlyOffice (Office Suite)
 - Add OnlyOffice repository
