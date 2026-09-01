@@ -78,7 +78,7 @@ sudo dnf install qview
   sudo dnf install fluidsynth
   ```
 - [DOWNLOAD](https://github.com/thesoundsofasun/mpv-custom-build/releases/download/latest/mpv-player-config-linux.zip) config files
-- Extract archive and drop files and folders from the "config" folder into ~/.var/app/io.mpv.Mpv/config/mpv/ directory
+- Extract archive and drop files and folders from the "config" folder in ~/.var/app/io.mpv.Mpv/config/mpv/ directory
 - Allow MPV to interact with desktop:
   ```
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
@@ -91,6 +91,7 @@ sudo dnf install qview
  ```
  ~/Applications/REAPER/reaper -cfgfile ~/Applications/REAPER/reaper.ini
  ```
+ - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications/ directory
 #### - VCV Rack (Modular Workstation)
 
 ## Office
