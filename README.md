@@ -79,10 +79,10 @@ sudo dnf install qview
   ```
 - [DOWNLOAD](https://github.com/thesoundsofasun/mpv-custom-build/releases/download/latest/mpv-player-config-linux.zip) config files
 - Extract archive and drop files and folders from the "config" folder into ~/.var/app/io.mpv.Mpv/config/mpv/ directory
-##### Allow MPV to interact with desktop:
-```
-sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
-```
+- Allow MPV to interact with desktop:
+  ```
+  sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
+  ```
 ## Office
 #### - OnlyOffice (Office Suite)
 - Add OnlyOffice repository
@@ -148,6 +148,15 @@ sudo dnf install plasma-systemmonitor
 
 
 --------------------------------------------------------------------------
+## Bash Scripts
+#### Find all files in "/" directory with exception of system ones
+```
+echo "alias findr='find / -path /proc -prune -o -path /sys -prune -o -path /dev -prune -o -path /run -prune -o -print 2>/dev/null | while read -r file; do if ! rpm -qf \"\$file\" &>/dev/null; then echo \"\$file\"; fi; done | grep -i'" >> ~/.bashrc && source ~/.bashrc
+
+source ~/.bashrc
+```
+
+
 ## Clean uninstalling packages
 #### 1st step: Uninstallation
 ```
@@ -163,12 +172,9 @@ sudo dnf autoremove
     ```
     sudo find / -iname "*package*" 2>/dev/null
     ```
-  - Scans "/" directory and shows all files excluding system files
+  - Scans "/" directory and shows all files excluding system files (using custom bash script)
     ```
-    find / -path /proc -prune -o -path /sys -prune -o -path /dev -prune -o -path /run -prune -o \
-    -iname "*package*" -print 2>/dev/null | while read -r file; do \
-    if ! rpm -qf "$file" &>/dev/null; then echo "$file"; fi; \
-    done
+    findr "package"
     ```
 - Delete the files that were found (exluding the ones that are not part of the targeted package)
   ```
