@@ -58,11 +58,11 @@ sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
 sudo dnf install fastfetch
 ```
-  - Generate Fastfetch config
+- Generate Fastfetch config
   ```
   fastfetch --gen-config
   ```
-  - Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.config/fastfetch/config.jsong) 
+- Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.config/fastfetch/config.jsong) 
   ```
   micro ~/.config/fastfetch/config.jsonc
   ``` 
