@@ -53,6 +53,20 @@ sudo dnf install libheif-freeworld qt-heif-image-plugin
   sudo dnf swap ffmpeg-free ffmpeg --allowerasing
   ```
 --------------------------------------------------------------------------
+## CLI Tools
+#### - Fastfetch (System Information)
+```
+sudo dnf install fastfetch
+```
+  - Generate Fastfetch config
+  ```
+  fastfetch --gen-config
+  ```
+  - Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.config/fastfetch/config.jsong) 
+  ```
+  micro ~/.config/fastfetch/config.jsonc
+  ``` 
+
 ## Graphics
 #### - Blender (3D Redactor)
 ```
