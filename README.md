@@ -4,13 +4,15 @@
 #### - Boot Loader (GRUB)
 #### - File System (ext4) - 1 GiB
 --------------------------------------------------------------------------
+| Color | Package Manager |
+| :--- | :--- |
+|🟩|DNF Packages|
+|🟦|Flatpak Packages|
+|🟪|Standalone Binaries|
 ## Desktop Environment (KDE Plasma)
-#### - Plasma Desktop (Desktop)
-#### - Plasma Login Manager (Login Manager)
-#### - Dolphin - (File Explorer)
-#### - KScreen - (Screen Manager)
-#### - PlasmaNM - (Network Manager)
-#### - PlasmaPA - (Audio Manager for Pipewire) 
+| Desktop | Login Manager | File Explorer | Screen Manager | Network Manager | Audio Manager for Pipewire |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
 ```
