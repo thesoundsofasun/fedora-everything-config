@@ -1,0 +1,16 @@
+[Desktop Entry]
+Categories=AudioVideo;Audio;AudioEditing;
+Comment=Virtual Eurorack Studio
+Exec=/home/aehaze/Applications/Cardinal/CardinalJACK %F
+GenericName=Digital Audio Workstation
+Icon=/home/aehaze/.local/share/applications/icons/Cardinal.svg
+Keywords=audio;midi;daw;music;
+Name=Cardinal
+NoDisplay=false
+Path=/home/aehaze/Applications/Cardinal
+PrefersNonDefaultGPU=false
+StartupNotify=true
+StartupWMClass=DISTRHO-Cardinal
+Terminal=false
+Type=Application
+Version=1.0
