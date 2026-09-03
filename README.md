@@ -170,6 +170,11 @@ sudo dnf install spectacle
 ```
 sudo dnf install plasma-systemmonitor
 ```
+## WINE
+#### Bottles (Wine front-end) 
+```
+flatpak install flathub com.usebottles.bottles
+```
 
 
 --------------------------------------------------------------------------
