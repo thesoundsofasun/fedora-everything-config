@@ -132,9 +132,9 @@ sudo dnf install kate
 ```
 sudo dnf install ark
 ```
-#### - qpwgraph (Pipewire Graph Manager)
+#### - Flatseal (Flatpak permission manager)
 ```
-sudo dnf install qpwgraph
+flatpak install flathub com.github.tchx84.Flatseal
 ```
 #### - Local Send (File Sharing) (Flatpak (Flathub))
 ```
@@ -161,6 +161,10 @@ sudo dnf install obs
 #### - qBittorrent (Torrent Downloader)
 ```
 sudo dnf install qbittorrent
+```
+#### - qpwgraph (Pipewire Graph Manager)
+```
+sudo dnf install qpwgraph
 ```
 #### - Spectacle - (Screenshot Application)
 ```
