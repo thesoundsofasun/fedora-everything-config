@@ -26,7 +26,7 @@ sudo systemctl enable plasmalogin
 ```
 --------------------------------------------------------------------------
 ## Package Managers
-#### - Flatpak
+#### - 🟩 Flatpak
 - Install Flatpak
   ```
   sudo dnf install flatpak
@@ -35,17 +35,17 @@ sudo systemctl enable plasmalogin
   ```
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   ```
-- Enable RPM Fusion (free and nonfree)
+#### RPM Fusion Repository (free and nonfree)
   ```
   sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-    $(rpm -E %fedora).noarch.rpm
   ```
 --------------------------------------------------------------------------
 ## Compatibility
-#### - AppImage support - "fuse" and "fuse-libs"
+#### - 🟩 AppImage support - "fuse" and "fuse-libs"
 ```
 sudo dnf install fuse fuse-libs
 ```
-#### - HEIC/HEIF formats support
+#### - 🟩 HEIC/HEIF formats support
 ```
 sudo dnf install libheif-freeworld qt-heif-image-plugin
 ```
@@ -56,7 +56,7 @@ sudo dnf install libheif-freeworld qt-heif-image-plugin
   ```
 --------------------------------------------------------------------------
 ## CLI Tools
-#### - Fastfetch (System Information)
+#### - 🟩 Fastfetch (System Information)
 ```
 sudo dnf install fastfetch
 ```
@@ -70,26 +70,26 @@ sudo dnf install fastfetch
   ``` 
 
 ## Graphics
-#### - Blender (3D Redactor)
+#### - 🟩 Blender (3D Redactor)
 ```
 sudo dnf install blender
 ```
 ## Internet
-#### - Firefox (Web Browser)
+#### - 🟩 Firefox (Web Browser)
 ```
 sudo dnf install firefox
 ```
 ## Multimedia
-#### - qView (Image Viewer)
+#### - 🟩 qView (Image Viewer)
 ```
 sudo dnf install qview
 ```
-#### - MPV (Media Player)
+#### - 🟦 MPV (Media Player)
 - Install MPV Media Player from Flathub
   ```
   flatpak install flathub io.mpv.Mpv -y
   ```
-- Install FluidSynth for MIDI playback support
+- Install 🟩 FluidSynth for MIDI playback support
   ```
   sudo dnf install fluidsynth
   ```
@@ -100,7 +100,8 @@ sudo dnf install qview
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
   ```
 ## Music Production
-#### - Reaper (DAW)
+#### - Cardinal (Modular Workstation)
+#### - 🟪 Reaper (DAW)
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
  - Extract "REAPER" folder from downloaded archive into ~/Applications
  - Make REAPER fully Portable
@@ -108,10 +109,10 @@ sudo dnf install qview
  ~/Applications/REAPER/reaper -cfgfile ~/Applications/REAPER/reaper.ini
  ```
  - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications/ directory
-#### - VCV Rack (Modular Workstation)
+
 
 ## Office
-#### - OnlyOffice (Office Suite)
+#### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
   ```
   sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
@@ -121,24 +122,24 @@ sudo dnf install qview
   sudo dnf install onlyoffice-desktopeditors -y
   ```
 ## Text Editors
-#### - Micro (Terminal Text Editor)
+#### - 🟩 Micro (Terminal Text Editor)
 ```
 sudo dnf install micro
 ```
-#### - Kate (GUI Text Editor)
+#### - 🟩 Kate (GUI Text Editor)
 ```
 sudo dnf install kate
 ```
 ## Utilities
-#### - Ark (Archivator)
+#### - 🟩 Ark (Archivator)
 ```
 sudo dnf install ark
 ```
-#### - Flatseal (Flatpak permission manager)
+#### - 🟦 Flatseal (Flatpak permission manager)
 ```
 flatpak install flathub com.github.tchx84.Flatseal
 ```
-#### - Local Send (File Sharing) (Flatpak (Flathub))
+#### - 🟦 Local Send (File Sharing) (Flatpak (Flathub))
 ```
 flatpak install flathub org.localsend.localsend_app
 ```
@@ -148,41 +149,34 @@ flatpak install flathub org.localsend.localsend_app
   sudo firewall-cmd --permanent --add-port=53317/tcp
   sudo firewall-cmd --reload
   ```
-#### - KeePassXC - (Password manager)
+#### - 🟩 KeePassXC - (Password manager)
 ```
 sudo dnf install keepassxc
 ```
-#### - Konsole (Terminal Emulator)
+#### - 🟩 Konsole (Terminal Emulator)
 ```
 sudo dnf install konsole
 ```
-#### - OBS Studio (Screen Recorder)
+#### - 🟩 OBS Studio (Screen Recorder)
 ```
 sudo dnf install obs
 ```
-#### - qBittorrent (Torrent Downloader)
+#### - 🟩 qBittorrent (Torrent Downloader)
 ```
 sudo dnf install qbittorrent
 ```
-#### - qpwgraph (Pipewire Graph Manager)
+#### - 🟩 qpwgraph (Pipewire Graph Manager)
 ```
 sudo dnf install qpwgraph
 ```
-#### - Spectacle - (Screenshot Application)
+#### - 🟩 Spectacle - (Screenshot Application)
 ```
 sudo dnf install spectacle
 ```
-#### - System Monitor (System Resource Monitoring)
+#### - 🟩 System Monitor (System Resource Monitoring)
 ```
 sudo dnf install plasma-systemmonitor
 ```
-## WINE
-#### Bottles (Wine front-end) 
-```
-flatpak install flathub com.usebottles.bottles
-```
-
-
 --------------------------------------------------------------------------
 ## Custom bash Scripts
 #### Find all files in "/" directory except system ones
