@@ -100,7 +100,10 @@ sudo dnf install qview
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
   ```
 ## Music Production
-#### - Cardinal (Modular Workstation)
+#### - 🟪 Cardinal (Modular Workstation)
+ - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
+ - Extract "Cardinal" folder from downloaded archive into ~/Applications
+ - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory
 #### - 🟪 Reaper (DAW)
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
  - Extract "REAPER" folder from downloaded archive into ~/Applications
