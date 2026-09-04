@@ -102,14 +102,14 @@ sudo dnf install qview
 ## Music Production
 #### - 🟪 Cardinal (Modular Workstation)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
- - Extract "Cardinal" folder from downloaded archive into ~/Applications
+ - Extract "Cardinal" folder from downloaded archive into ~/.opt
  - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory
 #### - 🟪 Reaper (DAW)
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
- - Extract "REAPER" folder from downloaded archive into ~/Applications
+ - Extract "REAPER" folder from downloaded archive into ~/.opt
  - Make REAPER fully Portable
  ```
- ~/Applications/REAPER/reaper -cfgfile ~/Applications/REAPER/reaper.ini
+ ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
  ```
  - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications/ directory
 
