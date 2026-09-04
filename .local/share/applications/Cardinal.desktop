@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=AudioVideo;Audio;AudioEditing;
 Comment=Virtual Eurorack Studio
-Exec=/home/aehaze/Applications/Cardinal/CardinalJACK %F
+Exec=/home/aehaze/.opt/Cardinal/CardinalJACK %F
 GenericName=Digital Audio Workstation
 Icon=/home/aehaze/.local/share/applications/icons/Cardinal.svg
 Keywords=audio;midi;daw;music;
