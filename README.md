@@ -74,6 +74,10 @@ sudo dnf install fastfetch
 ```
 sudo dnf install blender
 ```
+#### - Inkscape (Vector Graphics)
+```
+sudo dnf install inkscape
+```
 ## Internet
 #### - 🟩 Firefox (Web Browser)
 ```
