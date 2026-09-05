@@ -3,7 +3,7 @@ Categories=Utility;FileTransfer;Network;
 Comment=Share files to nearby devices
 Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=localsend --file-forwarding org.localsend.localsend_app @@u %U @@
 GenericName=Local file sharing
-Icon=/home/aehaze/.local/share/applications/icons/LocalSend.svg
+Icon=/home/aehaze/.local/share/icons/LocalSend.svg
 Name=LocalSend
 NoDisplay=false
 Path=
