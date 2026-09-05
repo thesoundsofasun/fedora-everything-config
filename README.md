@@ -68,7 +68,10 @@ sudo dnf install fastfetch
   ```
   micro ~/.config/fastfetch/config.jsonc
   ``` 
-
+#### - Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
+  ``` 
+  sudo dnf install pipewire-utils
+  ```
 ## Graphics
 #### - 🟩 Blender (3D Redactor)
 ```
