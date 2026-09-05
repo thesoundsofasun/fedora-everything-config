@@ -110,14 +110,14 @@ sudo dnf install qview
  - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory
  - Create symlinks so Cardinal would recognize Carla
    - Symlink in Cardinal directory:
-   ```
-   ln -s /usr/lib64/carla ~/.opt/Cardinal
-   ```
+     ```
+     ln -s /usr/lib64/carla ~/.opt/Cardinal
+     ```
    - Symlink in /usr/lib directory (Cardinal expects to find Carla there)
-   ```
-   sudo ln -s /usr/lib64/carla /usr/lib/carla
-   ```
-#### - 🟪 Carla
+     ```
+     sudo ln -s /usr/lib64/carla /usr/lib/carla
+     ```
+#### - 🟪 Carla (Audio Plugin Host)
 ```
 sudo dnf install Carla Carla-vst
 ```
