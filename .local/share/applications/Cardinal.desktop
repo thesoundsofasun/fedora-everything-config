@@ -2,7 +2,7 @@
 Categories=AudioVideo;Audio;AudioEditing;
 Comment=Virtual Eurorack Studio
 Exec=/home/aehaze/.opt/Cardinal/CardinalJACK %F
-GenericName=Digital Audio Workstation
+GenericName=Virtual Modular Synthesizer
 Icon=/home/aehaze/.local/share/icons/Cardinal.svg
 Keywords=audio;midi;daw;music;
 Name=Cardinal
