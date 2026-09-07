@@ -131,8 +131,17 @@ sudo dnf install Carla Carla-vst
  ```
  ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
  ```
- - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications/ directory
+ - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory
 
+#### - VST Plugin Portable Environment Setup (bwrap should be installed !!!)
+ - Create directories for vst plugins
+   ```
+   mkdir ~/.vst
+   mkdir ~/.vst/home
+   mkdir ~/.vst/home/plugins
+   mkdir ~/.vst/home/plugins/.vst3
+   ```
+ - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory
 
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
