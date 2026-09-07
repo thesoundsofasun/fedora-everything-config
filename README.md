@@ -110,7 +110,10 @@ sudo dnf install qview
 #### - 🟪 Cardinal (Modular Workstation)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
  - Extract "Cardinal" folder from downloaded archive into ~/.opt
- - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory
+ - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory and make it executable
+   ```
+   chmod +x ~/.local/share/applications/Cardinal.desktop
+   ```
  - Create symlinks so Cardinal would recognize Carla
    - Symlink in Cardinal directory:
      ```
@@ -128,21 +131,30 @@ sudo dnf install Carla Carla-vst
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
  - Extract "REAPER" folder from downloaded archive into ~/.opt
  - Make REAPER fully Portable
- ```
- ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
- ```
- - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory
-
+   ```
+   ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
+   ```
+ - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
+   ```
+   chmod +x ~/.local/share/applications/REAPER.desktop
+   ```
+ - Add $USER to an "audio" group 
+   ```
+   sudo usermod -aG audio $USER
+   ```
+ - Prevent CPU Sleep for Low-Latency Audio (udev rule) (works after reboot !!!)
+   ```
+   echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
+   ```
 #### - VST Plugin Portable Environment Setup (bwrap should be installed !!!)
  - Create directories for vst plugins
    ```
-   mkdir ~/.vst
-   mkdir ~/.vst/home
-   mkdir ~/.vst/home/plugins
-   mkdir ~/.vst/home/plugins/.vst3
+   mkdir -p ~/.vst/home/plugins/.vst3
    ```
- - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory
-
+ - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory and make it executable
+   ```
+   chmod +x ~/.opt/REAPER/reaper-portable.sh
+   ```
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
