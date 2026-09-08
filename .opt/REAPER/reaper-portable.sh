@@ -6,6 +6,7 @@ FAKE_HOME="$HOME/.vst/home/plugins"
 
 # Ensure our fake home exists
 mkdir -p "$FAKE_HOME"
+ln -sn "$HOME/.local/share/fonts"  "$FAKE_HOME/.local/share/fonts" 2>/dev/null || true
 
 # Ensure X11 UI apps don't lose authentication when we change the HOME variable
 export XAUTHORITY="${XAUTHORITY:-$HOME/.Xauthority}"
