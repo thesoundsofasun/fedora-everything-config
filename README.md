@@ -81,7 +81,12 @@ sudo dnf install blender
 ```
 sudo dnf install gimp
 ```
-#### - G'MIC (GIMP Plugin and Standalone versions) (Image Filters)
+ - Download [GIMP config](https://github.com/thesoundsofasun/gimp-config/tree/main/.config/GIMP/3.2) and drop it in ~/.config/GIMP/3.2
+ - Download [org.gimp.GIMP.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/org.gimp.GIMP.desktop) and drop it in ~/.local/share/applications directory and make it executable
+   ```
+   chmod +x ~/.local/share/applications/org.gimp.GIMP.desktop
+   ```
+#### - 🟩 G'MIC (GIMP Plugin and Standalone versions) (Image Filters)
 ```
 sudo dnf install gmic-gimp
 ```
