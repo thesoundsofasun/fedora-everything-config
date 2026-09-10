@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=REAPER
+GenericName=Digital Audio Workstation
+Comment=Audio production application
+Exec=/home/aehaze/.opt/REAPER/reaper-portable.sh %F
+Icon=/home/aehaze/.local/share/icons/REAPER.png
+Terminal=false
+Categories=AudioVideo;Audio;Recorder;
+Keywords=audio;midi;daw;music;
+StartupWMClass=REAPER
