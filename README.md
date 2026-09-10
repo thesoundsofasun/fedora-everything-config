@@ -2,6 +2,7 @@
 
 ## System settings
 #### - Boot Loader (GRUB)
+- Download a [GRUB Theme]( 
 #### - File System (ext4) - 1 GiB
 --------------------------------------------------------------------------
 | Color | Package Manager |
