@@ -65,7 +65,7 @@ sudo dnf install fastfetch
   ```
   fastfetch --gen-config
   ```
-- Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.config/fastfetch/config.jsong) 
+- Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.config/fastfetch/config.jsong) 
   ```
   micro ~/.config/fastfetch/config.jsonc
   ``` 
@@ -83,7 +83,7 @@ sudo dnf install blender
 sudo dnf install gimp
 ```
  - Download [GIMP config](https://github.com/thesoundsofasun/gimp-config/tree/main/.config/GIMP/3.2) and drop it in ~/.config/GIMP/3.2
- - Download [org.gimp.GIMP.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/org.gimp.GIMP.desktop) and drop it in ~/.local/share/applications directory and make it executable
+ - Download [org.gimp.GIMP.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/org.gimp.GIMP.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
    chmod +x ~/.local/share/applications/org.gimp.GIMP.desktop
    ```
@@ -124,7 +124,7 @@ sudo dnf install qview
 #### - 🟪 Cardinal (Modular Workstation)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
  - Extract "Cardinal" folder from downloaded archive into ~/.opt
- - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory and make it executable
+ - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory and make it executable
    ```
    chmod +x ~/.local/share/applications/Cardinal.desktop
    ```
@@ -148,7 +148,7 @@ sudo dnf install Carla Carla-vst
    ```
    ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
    ```
- - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
+ - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
    chmod +x ~/.local/share/applications/REAPER.desktop
    ```
@@ -165,7 +165,7 @@ sudo dnf install Carla Carla-vst
    ```
    mkdir -p ~/.vst/home/plugins/.vst3
    ```
- - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory and make it executable
+ - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory and make it executable
    ```
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
