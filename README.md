@@ -77,7 +77,15 @@ sudo dnf install fastfetch
 ```
 sudo dnf install blender
 ```
-#### - Inkscape (Vector Graphics)
+#### - 🟩 GIMP (Image Editor)
+```
+sudo dnf install gimp
+```
+#### - G'MIC (GIMP Plugin and Standalone versions) (Image Filters)
+```
+sudo dnf install gmic-gimp
+```
+#### - 🟩 Inkscape (Vector Graphics)
 ```
 sudo dnf install inkscape
 ```
