@@ -5,11 +5,25 @@
 --------------------------------------------------------------------------
 ## System configurations
 #### - Disable core dumps (/var/lib/systemd/coredump/)
-- Create and edit coredump.conf file in /etc/systemd 
+- Create and edit coredump.conf file in /etc/systemd (activates after restart)
   ```
   sudo micro /etc/systemd/coredump.conf
   ```
-- Copy config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)  
+- Copy config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)
+- Restart to apply changes
+  ```
+  sudo systemctl daemon-reload
+  ```
+#### - Limit journald disk usage to 250 mbs
+- Create and edit journald.conf file in /etc/systemd (activates after restart)
+  ```
+  sudo micro /etc/systemd/journald.conf
+  ```
+- Copy config from [journald.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/journald.conf)
+- Restart to apply changes
+  ```
+  sudo systemctl restart systemd-journald
+  ```  
 --------------------------------------------------------------------------
 | Color | Package Manager |
 | :--- | :--- |
