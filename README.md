@@ -294,8 +294,6 @@ sudo dnf install plasma-systemmonitor
 #### Find all files in "/" directory except system ones
 ```
 echo "alias findr='find / -path /proc -prune -o -path /sys -prune -o -path /dev -prune -o -path /run -prune -o -print 2>/dev/null | grep -Fvxf <(rpm -qal | awk \"NF\" | sort -u) | grep -i'" >> ~/.bashrc && source ~/.bashrc
-
-source ~/.bashrc
 ```
 --------------------------------------------------------------------------
 
