@@ -23,7 +23,7 @@ sudo systemctl enable plasmalogin
   ```
   sudo mkdir -p /boot/grub2/themes/
   ```
-- [Download]( and copy a theme to /boot/grub2/themes
+- [Download](https://github.com/thesoundsofasun/fedora-everything-config/tree/main/boot/grub2/themes/grub-theme) and copy a theme to /boot/grub2/themes
   ```
   sudo cp -r grub-theme /boot/grub2/themes/
   ```
@@ -32,7 +32,7 @@ sudo systemctl enable plasmalogin
   sudo micro /etc/default/grub
   ```
 - Copy and paste config from [grub](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/default/grub)
-- Restart to apply changes
+- Rebuild the GRUB Configuration
   ```
   sudo grub2-mkconfig -o /boot/grub2/grub.cfg
   ```
