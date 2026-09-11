@@ -1,9 +1,15 @@
 # Fedora Config
-
-## System settings
 #### - Boot Loader (GRUB)
 - Download a [GRUB Theme]( 
 #### - File System (ext4) - 1 GiB
+--------------------------------------------------------------------------
+## System configurations
+#### - Disable core dumps (/var/lib/systemd/coredump/)
+- Create and edit coredump.conf file in /etc/systemd 
+  ```
+  sudo micro /etc/systemd/coredump.conf
+  ```
+- Copy config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)  
 --------------------------------------------------------------------------
 | Color | Package Manager |
 | :--- | :--- |
