@@ -1,6 +1,5 @@
 # Fedora Config
 #### - Boot Loader (GRUB)
-- Download a [GRUB Theme]( 
 #### - File System (ext4) - 1 GiB
 --------------------------------------------------------------------------  
 ## Desktop Environment (KDE Plasma)
@@ -19,12 +18,30 @@ sudo systemctl set-default graphical.target
 sudo systemctl enable plasmalogin
 ```
 ## System configurations
+#### - Apply a custom theme to GRUB menu
+- Create a "themes" directory in /boot/grub2 directory
+  ```
+  sudo mkdir -p /boot/grub2/themes/
+  ```
+- [Download]( and copy a theme to /boot/grub2/themes
+  ```
+  sudo cp -r grub-theme /boot/grub2/themes/
+  ```
+- Edit grub configuration file
+  ```
+  sudo micro /etc/default/grub
+  ```
+- Copy and paste config from [grub](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/default/grub)
+- Restart to apply changes
+  ```
+  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+  ```
 #### - Disable core dumps (/var/lib/systemd/coredump/)
 - Create and edit coredump.conf file in /etc/systemd (activates after restart)
   ```
   sudo micro /etc/systemd/coredump.conf
   ```
-- Copy config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)
+- Copy and paste config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)
 - Restart to apply changes
   ```
   sudo systemctl daemon-reload
@@ -34,7 +51,7 @@ sudo systemctl enable plasmalogin
   ```
   sudo micro /etc/systemd/journald.conf
   ```
-- Copy config from [journald.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/journald.conf)
+- Copy and paste config from [journald.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/journald.conf)
 - Restart to apply changes
   ```
   sudo systemctl restart systemd-journald
