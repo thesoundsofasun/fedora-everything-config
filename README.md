@@ -3,11 +3,11 @@
 #### - File System (ext4) - 1 GiB
 --------------------------------------------------------------------------  
 ## Desktop Environment (KDE Plasma)
-| Desktop | Login Manager | File Explorer | Screen Manager | Network Manager | Audio Manager for Pipewire |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
+| Desktop | Login Manager | File Explorer | Admin Rights | Screen Manager | Network Manager | Audio Manager for Pipewire |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 Kio Admin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
 ```
-sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
+sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen  plasma-nm plasma-pa
 ```
 #### - Enabling KDE Plasma:
 ```
