@@ -2,7 +2,22 @@
 #### - Boot Loader (GRUB)
 - Download a [GRUB Theme]( 
 #### - File System (ext4) - 1 GiB
---------------------------------------------------------------------------
+--------------------------------------------------------------------------  
+## Desktop Environment (KDE Plasma)
+| Desktop | Login Manager | File Explorer | Screen Manager | Network Manager | Audio Manager for Pipewire |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
+```
+sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
+```
+#### - Enabling KDE Plasma:
+```
+sudo systemctl set-default graphical.target
+```
+#### - Enabling Plasma Login Manager:
+```
+sudo systemctl enable plasmalogin
+```
 ## System configurations
 #### - Disable core dumps (/var/lib/systemd/coredump/)
 - Create and edit coredump.conf file in /etc/systemd (activates after restart)
@@ -23,30 +38,19 @@
 - Restart to apply changes
   ```
   sudo systemctl restart systemd-journald
-  ```  
+  ```
 --------------------------------------------------------------------------
+## Package Managers
 | Color | Package Manager |
 | :--- | :--- |
 |🟩|DNF Packages|
 |🟦|Flatpak Packages|
 |🟪|Standalone Binaries|
-## Desktop Environment (KDE Plasma)
-| Desktop | Login Manager | File Explorer | Screen Manager | Network Manager | Audio Manager for Pipewire |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
-```
-sudo dnf install plasma-desktop plasma-login-manager dolphin kscreen plasma-nm plasma-pa
-```
-#### - Enabling KDE Plasma:
-```
-sudo systemctl set-default graphical.target
-```
-#### - Enabling Plasma Login Manager:
-```
-sudo systemctl enable plasmalogin
-```
---------------------------------------------------------------------------
-## Package Managers
+#### - DNF
+- Add RPM Fusion Repository (free and nonfree)
+  ```
+  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release- $(rpm -E %fedora).noarch.rpm
+  ```
 #### - 🟩 Flatpak
 - Install Flatpak
   ```
@@ -56,9 +60,22 @@ sudo systemctl enable plasmalogin
   ```
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   ```
-#### RPM Fusion Repository (free and nonfree)
+#### - Manage Packages
+- Remove unused DNF dependencies
   ```
-  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-    $(rpm -E %fedora).noarch.rpm
+  sudo dnf autoremove
+  ```
+- Clean DNF cache
+  ```
+  sudo dnf clean all
+  ```
+- Remove unused Flatpak runtimes
+  ```
+  flatpak uninstall --unused
+  ```
+- Repair Flatpak installations
+  ```
+  flatpak repair
   ```
 --------------------------------------------------------------------------
 ## Compatibility
