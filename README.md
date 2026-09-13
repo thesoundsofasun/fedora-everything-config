@@ -210,6 +210,19 @@ sudo dnf install qview
    ```
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
+ #### - VCV Rack (Virtual Modular Synthesizer)
+ - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
+ - Extract "Rack2Free" folder from downloaded archive into ~/.opt
+ - Make VCV Rack fully Portable
+   - Download [rack-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/Rack2Free/rack-portable.sh) and drop it in ~/.opt/Rack2Free directory and make it executable
+     ```
+     chmod +x ~/.opt/REAPER/reaper-portable.sh
+     ```
+   - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory   
+   - Download [Rack2.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Rack2.desktop) and drop it in ~/.local/share/applications directory and make it executable
+    ```
+    chmod +x ~/.local/share/applications/Rack2.desktop
+    ```
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
