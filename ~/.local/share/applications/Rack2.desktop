@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Rack2
+GenericName=Virtual Modular Synthesizer
+Comment=Virtual Modular Synthesizer
+Exec=env GDK_BACKEND=x11 /home/aehaze/.opt/Rack2Free/rack-portable.sh %F
+Icon=/home/aehaze/.local/share/icons/Rack2.png
+Terminal=false
+Categories=AudioVideo;Audio;Recorder;
+Keywords=audio;midi;music;
+StartupWMClass=GLFW-Application
