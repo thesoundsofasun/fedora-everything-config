@@ -178,6 +178,7 @@ sudo dnf install qview
 #### - 🟪 Cardinal (Modular Workstation)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
  - Extract "Cardinal" folder from downloaded archive into ~/.opt
+ - Download [Cardinal.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Cardinal.svg) desktop icon and drop it in ~/.local/share/icons directory   
  - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory and make it executable
    ```
    chmod +x ~/.local/share/applications/Cardinal.desktop
@@ -210,7 +211,7 @@ sudo dnf install qview
    ```
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
- #### - VCV Rack (Virtual Modular Synthesizer)
+ #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
  - Make VCV Rack fully Portable
@@ -218,11 +219,12 @@ sudo dnf install qview
      ```
      chmod +x ~/.opt/REAPER/reaper-portable.sh
      ```
-   - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory   
-   - Download [Rack2.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Rack2.desktop) and drop it in ~/.local/share/applications directory and make it executable
-    ```
-    chmod +x ~/.local/share/applications/Rack2.desktop
-    ```
+ - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory   
+ - Download [Rack2.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Rack2.desktop) and drop it in ~/.local/share/applications directory and make it executable
+   ```
+   chmod +x ~/.local/share/applications/Rack2.desktop
+   ```
+ - Download VCV Rack Modules from   
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
@@ -261,6 +263,8 @@ flatpak install flathub org.localsend.localsend_app
   sudo firewall-cmd --permanent --add-port=53317/tcp
   sudo firewall-cmd --reload
   ```
+- Download [LocalSend.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/LocalSend.svg) desktop icon and drop it in ~/.local/share/icons directory   
+
 #### - 🟩 KeePassXC - (Password manager)
 ```
 sudo dnf install keepassxc
