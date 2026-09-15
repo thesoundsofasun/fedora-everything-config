@@ -56,6 +56,15 @@ sudo systemctl enable plasmalogin
   ```
   sudo systemctl restart systemd-journald
   ```
+#### - Process Optimization
+- Disable kwallet background process by changing [kwallet configuration](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.config/kwalletrc)
+  ```
+  micro ~/.config/kwallet.rc
+  ```
+- Remove speech-dispatcher (Screen Reader)
+  ```
+  sudo dnf remove speech-dispatcher
+  ```
 --------------------------------------------------------------------------
 ## Package Managers
 | Color | Package Manager |
@@ -250,7 +259,7 @@ sudo dnf install qview
  - Make VCV Rack fully Portable
    - Download [rack-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/Rack2Free/rack-portable.sh) and drop it in ~/.opt/Rack2Free directory and make it executable
      ```
-     chmod +x ~/.opt/REAPER/reaper-portable.sh
+     chmod +x ~/.opt/Rack2Free/rack-portable.sh
      ```
  - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory
  - Download [Rack2.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Rack2.desktop) and drop it in ~/.local/share/applications directory and make it executable
