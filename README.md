@@ -211,7 +211,8 @@ sudo dnf install qview
    ```
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
- -   
+#### - Yabridge Portable Environment Setup
+
  #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
