@@ -202,7 +202,7 @@ sudo dnf install qview
    ```
    echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
    ```
-#### - VST Plugin Portable Environment Setup (bwrap should be installed !!!)
+#### - VST Plugin Portable Environment Setup
  - Create directories for vst plugins
    ```
    mkdir -p ~/.vst/home/plugins/.vst3
@@ -211,6 +211,7 @@ sudo dnf install qview
    ```
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
+ -   
  #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
@@ -224,7 +225,7 @@ sudo dnf install qview
    ```
    chmod +x ~/.local/share/applications/Rack2.desktop
    ```
- - Download VCV Rack Modules from   
+ - [Download VCV Rack Modules](https://drive.google.com/file/d/10dWvAFvnl0i-1tTi9Dew_FDPF6kfleE2/view?usp=sharing) and extract archive into ~/.opt/Rack2Free/Rack2 directory  
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
