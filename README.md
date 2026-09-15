@@ -190,6 +190,7 @@ sudo dnf install qview
    ```
    ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
    ```
+ - Download [REAPER.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/REAPER.png) desktop icon and drop it in ~/.local/share/icons directory
  - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
    chmod +x ~/.local/share/applications/REAPER.desktop
@@ -212,17 +213,19 @@ sudo dnf install qview
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
 #### - Yabridge Portable Environment Setup
-- Install wine 
+- Install wine packages
   ```
-  sudo dnf install wine
+  sudo dnf install wine wine-mono winetricks
   ```
 - [Download yabridge](https://github.com/robbert-vdh/yabridge/releases/tag/5.1.1) extract archive into ~/.vst/home/plugins/.local/share and make "yabridgectl" executable
   ```
   chmod +x ~/.vst/home/plugins/.local/share/yabridge/yabridgectl
   ```
-- [Download vst-shell](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/bin/vst-shell) drop it in ~/.local/bin and make it executable
+- [Download vst-shell](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/bin/vst-shell) drop it in ~/.local/bin, add it to the PATH and make it executable
   ```
   mkdir mkdir -p ~/.local/bin
+  export PATH="$HOME/.local/bin:$PATH"
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
   chmod +x ~/.local/bin/vst-shell
   ```
 - Run wine with vst-shell.sh to install a plugins
@@ -249,7 +252,7 @@ sudo dnf install qview
      ```
      chmod +x ~/.opt/REAPER/reaper-portable.sh
      ```
- - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory   
+ - Download [Rack2.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Rack2.png) desktop icon and drop it in ~/.local/share/icons directory
  - Download [Rack2.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Rack2.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
    chmod +x ~/.local/share/applications/Rack2.desktop
@@ -293,7 +296,7 @@ flatpak install flathub org.localsend.localsend_app
   sudo firewall-cmd --permanent --add-port=53317/tcp
   sudo firewall-cmd --reload
   ```
-- Download [LocalSend.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/LocalSend.svg) desktop icon and drop it in ~/.local/share/icons directory   
+- Download [LocalSend.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/LocalSend.svg) desktop icon and drop it in ~/.local/share/icons directory
 
 #### - 🟩 KeePassXC - (Password manager)
 ```
