@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. Ensure the user folder exists
-mkdir -p "$HOME/.opt/Rack2Free/user"
+mkdir -p "$HOME/.opt/Rack2Free/Rack2"
 
 # 2. Move to the directory where the Rack executable lives
 cd "$HOME/.opt/Rack2Free" || exit
