@@ -212,7 +212,35 @@ sudo dnf install qview
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
 #### - Yabridge Portable Environment Setup
-
+- Install wine 
+  ```
+  sudo dnf install wine
+  ```
+- [Download yabridge](https://github.com/robbert-vdh/yabridge/releases/tag/5.1.1) extract archive into ~/.vst/home/plugins/.local/share and make "yabridgectl" executable
+  ```
+  chmod +x ~/.vst/home/plugins/.local/share/yabridge/yabridgectl
+  ```
+- [Download vst-shell](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/bin/vst-shell) drop it in ~/.local/bin and make it executable
+  ```
+  mkdir mkdir -p ~/.local/bin
+  chmod +x ~/.local/bin/vst-shell
+  ```
+- Run wine with vst-shell.sh to install a plugins
+  ```
+  vst-shell wine ~/Downloads/installer.exe
+  ```
+- Add VST3 folder path to yabridge
+  ```
+  vst-shell yabridgectl add "$HOME/.vst/home/plugins/.wine/drive_c/Program Files/Common Files/VST3"
+  ```
+- Run yabridgectl with vst-shell.sh to sync plugins with the host
+  ```
+  vst-shell yabridgectl sync
+  ```
+- Run winecfg with vst-shell.sh and set Graphics to "Emulate a virtual desktop" with desktop size "1900x1060"
+  ```
+  vst-shell winecfg
+  ```
  #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
