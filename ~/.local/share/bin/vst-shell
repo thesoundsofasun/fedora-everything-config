@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+REAL_HOME="$HOME"
+FAKE_HOME="$REAL_HOME/.vst/home/plugins"
+
+# 1. Allow GUI apps (like Wine installers) to use the screen!
+export XAUTHORITY="${XAUTHORITY:-$REAL_HOME/.Xauthority}"
+
+# 2. Switch to the Fake Home
+export HOME="$FAKE_HOME"
+
+# 3. Explicitly tell Wine where to go, just to be incredibly safe
+export WINEPREFIX="$FAKE_HOME/.wine"
+
+# 4. Add Yabridge to the path
+export PATH="$FAKE_HOME/.local/share/yabridge:$REAL_HOME/.local/bin:$PATH"
+
+# 5. Execute the command
+exec "$@"
