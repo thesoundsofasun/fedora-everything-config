@@ -358,7 +358,12 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
   ```
 - Set Virtual Machine Manager to dark mode
   ```
-  GTK_THEME=Adwaita:dark virt-manager
+  rm -f /home/aehaze/.config/gtk-3.0/settings.ini
+  cat << EOF > /home/aehaze/.config/gtk-3.0/settings.ini
+  [Settings]
+  gtk-theme-name=Adwaita-dark
+  gtk-application-prefer-dark-theme=true
+  EOF
   ```
   
 #### Windows 11
