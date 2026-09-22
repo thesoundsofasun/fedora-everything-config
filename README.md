@@ -133,7 +133,15 @@ sudo dnf install fastfetch
 - Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.config/fastfetch/config.jsong) 
   ```
   micro ~/.config/fastfetch/config.jsonc
-  ``` 
+  ```
+#### - 🟩 Genisoimage (ISO Imaging Software)
+```
+sudo dnf install genisoimage
+```
+- Usage
+  ```
+  genisoimage -o output_image.iso /path/to/directory
+  ```
 #### - Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
   ``` 
   sudo dnf install pipewire-utils
