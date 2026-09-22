@@ -242,7 +242,7 @@ sudo dnf install qview
   ```
 - [Download vst-shell](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/bin/vst-shell) drop it in ~/.local/bin, add it to the PATH and make it executable
   ```
-  mkdir mkdir -p ~/.local/bin
+  mkdir -p ~/.local/bin
   export PATH="$HOME/.local/bin:$PATH"
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
   chmod +x ~/.local/bin/vst-shell
