@@ -6,14 +6,16 @@
 | Desktop | Login Manager | File Explorer | Admin Rights | Screen Manager | Network Manager | Audio Manager for Pipewire |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 Kio Admin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
+
+#### - Install core KDE Plasma packages:
 ```
 sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen  plasma-nm plasma-pa
 ```
-#### - Enabling KDE Plasma:
+#### - Enable KDE Plasma:
 ```
 sudo systemctl set-default graphical.target
 ```
-#### - Enabling Plasma Login Manager:
+#### - Enable Plasma Login Manager:
 ```
 sudo systemctl enable plasmalogin
 ```
@@ -335,6 +337,39 @@ sudo dnf install spectacle
 ```
 sudo dnf install plasma-systemmonitor
 ```
+## Virtualization
+| Hypervisor Core | Daemon Controller | CLI Client | Desktop GUI Manager | VM Provisioning Tool | Virtual Screen Viewer |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 🟩 qemu-kvm | 🟩 libvirt-daemon-kvm | 🟩 libvirt-client | 🟩 virt-manager | 🟩 virt-install | 🟩 virt-viewer |
+```
+sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-install virt-viewer
+```
+- Start libvirt daemon (Virtualization Daemon)
+  ```
+  sudo systemctl enable --now libvirtdsudo systemctl enable --now libvirtd
+  ```
+- Add user to the security group
+  ```
+  sudo usermod -aG libvirt $USER
+  ```
+- Reload terminal groups to apply changes
+  ```
+  newgrp libvirt
+  ```
+- Set Virtual Machine Manager to dark mode
+  ```
+  GTK_THEME=Adwaita:dark virt-manager
+  ```
+  
+#### Windows 11
+- [Download Windows 11 LTSC](https://buzzheavier.com/2gtemvaqgfm3) ISO from MAS
+- Open CMD Shift + F10 and use OOBE\BYPASSNRO command to bypass Microsoft Account login.
+- [Download virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.302-1) to integrate it with the host
+  - Add virtio-win.iso in the CD-ROM section of Virtual Machine Manager so it will appear in guest system and run virtio-win-gt-x64.msi installer
+- [Download winfsp.msi](https://github.com/winfsp/winfsp/releases#release-v2.1) inside of Windows VM to allow shared folders with the host
+- [Dowload spice-guest-tools-latest.exe](https://www.spice-space.org/download.html) (Under Windows binaries section)
+- Turn on QEMU Guest Agent, Spice VDAgent and VirtIO-FS services in services.msc menu
+
 --------------------------------------------------------------------------
 ## Custom bash Scripts
 #### Find all files in "/" directory except system ones
