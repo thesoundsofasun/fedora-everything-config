@@ -346,7 +346,7 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
 ```
 - Start libvirt daemon (Virtualization Daemon)
   ```
-  sudo systemctl enable --now libvirtdsudo systemctl enable --now libvirtd
+  sudo systemctl enable --now libvirtd
   ```
 - Add user to the security group
   ```
@@ -371,9 +371,26 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
 - Open CMD Shift + F10 and use OOBE\BYPASSNRO command to bypass Microsoft Account login.
 - [Download virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.302-1) to integrate it with the host
   - Add virtio-win.iso in the CD-ROM section of Virtual Machine Manager so it will appear in guest system and run virtio-win-gt-x64.msi installer
-- [Download winfsp.msi](https://github.com/winfsp/winfsp/releases#release-v2.1) inside of Windows VM to allow shared folders with the host
+- [Download winfsp.msi](https://github.com/winfsp/winfsp/releases) inside of Windows VM to allow shared folders with the host
+  - Configure virtual machine settings by pressing "Add Hardware" -> "Filesystem home" and copy this XML code (Modifying XML should be allowed)
+    ```
+    <filesystem type="mount" accessmode="passthrough">
+      <driver type="virtiofs"/>
+      <binary path="/usr/libexec/virtiofsd"/>
+      <source dir="/home"/>
+      <target dir="home"/>
+      <alias name="fs0"/>
+      <address type="pci" domain="0x0000" bus="0x05" slot="0x00" function="0x0"/>
+    </filesystem>
+    ```
 - [Dowload spice-guest-tools-latest.exe](https://www.spice-space.org/download.html) (Under Windows binaries section)
-- Turn on QEMU Guest Agent, Spice VDAgent and VirtIO-FS services in services.msc menu
+  - Configure virtual machine settings by pressing "Add Hardware" -> "Channel (spice)" and copy this XML code (Modifying XML should be allowed)
+    ```
+    <channel type="spicevmc">
+      <target type="virtio" name="com.redhat.spice.0"/>
+    </channel>
+    ```
+- Turn on QEMU Guest Agent, Spice VDAgent and VirtIO-FS services and set them in automatic mode in services.msc menu
 
 --------------------------------------------------------------------------
 ## Custom bash Scripts
