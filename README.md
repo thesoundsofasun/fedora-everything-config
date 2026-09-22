@@ -366,15 +366,15 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
   ```
 - Set Virtual Machine Manager to dark mode
   ```
-  rm -f /home/aehaze/.config/gtk-3.0/settings.ini
-  cat << EOF > /home/aehaze/.config/gtk-3.0/settings.ini
+  rm -f "$HOME/.config/gtk-3.0/settings.ini"
+  cat << EOF > "$HOME/.config/gtk-3.0/settings.ini"
   [Settings]
   gtk-theme-name=Adwaita-dark
   gtk-application-prefer-dark-theme=true
   EOF
   ```
   
-#### Windows 11
+- #### Windows 11
 - [Download Windows 11 LTSC](https://buzzheavier.com/2gtemvaqgfm3) ISO from MAS
 - Open CMD Shift + F10 and use OOBE\BYPASSNRO command to bypass Microsoft Account login.
 - [Download virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.302-1) to integrate it with the host
