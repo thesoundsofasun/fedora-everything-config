@@ -1,0 +1,30 @@
+[Desktop Entry]
+Actions=new-window;new-file;
+Categories=TextEditor;Development;
+Comment[en_US]=Sophisticated text editor for code, markup and prose
+Comment=Sophisticated text editor for code, markup and prose
+Exec=/home/aehaze/.opt/SublimeText/sublime_text %F
+GenericName[en_US]=Text Editor
+GenericName=Text Editor
+Icon=/home/aehaze/.local/share/icons/SublimeText
+MimeType=text/plain;
+Name[en_US]=Sublime Text
+Name=Sublime Text
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+
+[Desktop Action new-file]
+Exec=/opt/sublime_text/sublime_text --command new_file
+Name=New File
+OnlyShowIn=Unity;
+
+[Desktop Action new-window]
+Exec=/opt/sublime_text/sublime_text --launch-or-new-window
+Name=New Window
+OnlyShowIn=Unity;
