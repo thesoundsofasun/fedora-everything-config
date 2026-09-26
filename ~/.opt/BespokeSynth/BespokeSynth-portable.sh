@@ -1,28 +1,30 @@
 #!/usr/bin/env bash
 set -e
 
-# 1. Dynamically find the folder where this script (and Bespoke) lives
-BESPOKE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# 1. Dynamically find the folder where this script (and the app) lives
+APP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# 2. Define the real home and the shared sandbox (Fake Home)
 REAL_HOME="$HOME"
 FAKE_HOME="$REAL_HOME/.vst/home/plugins"
 
-# 2. Ensure directories exist
+# 3. Ensure the sandbox exists
 mkdir -p "$FAKE_HOME/.local/share"
-mkdir -p "$BESPOKE_DIR/.config"
-mkdir -p "$BESPOKE_DIR/.local/share"
-mkdir -p "$BESPOKE_DIR/Documents"
 
-# 3. Preserve UI and display permissions (Wayland + X11)
+# (Only the essential font link is kept so plugin UIs don't crash)
+ln -sn "$REAL_HOME/.local/share/fonts" "$FAKE_HOME/.local/share/fonts" 2>/dev/null || true
+
+# 4. Preserve display permissions (X11 & Wayland)
 export XAUTHORITY="${XAUTHORITY:-$REAL_HOME/.Xauthority}"
 export WAYLAND_DISPLAY="$WAYLAND_DISPLAY"
 
-# 4. Keeps your VST environment contained here (The Trap for Plugins)
+# 5. Clear XDG variables so the app is forced to rely entirely on $HOME
+unset XDG_CONFIG_HOME
+unset XDG_DATA_HOME
+unset XDG_DOCUMENTS_DIR
+
+# 6. Set the trap: point $HOME to the sandbox
 export HOME="$FAKE_HOME"
 
-# 5. Traps Bespoke cleanly inside its own folder (The Trap for Bespoke)
-export XDG_CONFIG_HOME="$BESPOKE_DIR/.config"
-export XDG_DATA_HOME="$BESPOKE_DIR/.local/share"
-export XDG_DOCUMENTS_DIR="$BESPOKE_DIR/Documents"
-
-# Launch Bespoke
-exec "$BESPOKE_DIR/BespokeSynth" "$@"
+# 7. Launch the app (Just change "BespokeSynth" to the name of your executable)
+exec "$APP_DIR/BespokeSynth" "$@"
