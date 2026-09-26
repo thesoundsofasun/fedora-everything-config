@@ -194,7 +194,7 @@ sudo dnf install qview
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
   ```
 ## Music Production
-#### - 🟪 Cardinal (Modular Workstation)
+#### - 🟪 Cardinal (Virtual Modular Synthesizer)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
  - Extract "Cardinal" folder from downloaded archive into ~/.opt
  - Download [Cardinal.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Cardinal.svg) desktop icon and drop it in ~/.local/share/icons directory   
@@ -262,8 +262,7 @@ sudo dnf install qview
  #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
- - Make VCV Rack fully Portable
-   - Download [rack-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/Rack2Free/rack-portable.sh) and drop it in ~/.opt/Rack2Free directory and make it executable
+ - Download [rack-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/Rack2Free/rack-portable.sh) and drop it in ~/.opt/Rack2Free directory and make it executable
      ```
      chmod +x ~/.opt/Rack2Free/rack-portable.sh
      ```
