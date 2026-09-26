@@ -9,7 +9,7 @@
 
 #### - Install core KDE Plasma packages:
 ```
-sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen  plasma-nm plasma-pa
+sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen plasma-nm plasma-pa
 ```
 #### - Enable KDE Plasma:
 ```
@@ -142,7 +142,11 @@ sudo dnf install genisoimage
   ```
   genisoimage -o output_image.iso /path/to/directory
   ```
-#### - Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
+#### - 🟩 Micro (Terminal Text Editor)
+```
+sudo dnf install micro
+```  
+#### - 🟩 Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
   ``` 
   sudo dnf install pipewire-utils
   ```
@@ -283,10 +287,6 @@ sudo dnf install qview
   sudo dnf install onlyoffice-desktopeditors -y
   ```
 ## Text Editors
-#### - 🟩 Micro (Terminal Text Editor)
-```
-sudo dnf install micro
-```
 #### - 🟩 Kate (GUI Text Editor)
 ```
 sudo dnf install kate
