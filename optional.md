@@ -11,7 +11,7 @@
 ```
 sudo dnf install Carla Carla-vst
 ```
-#### - BespokeSynth (Virtual Modular Synthesizer)
+#### - 🟪 BespokeSynth (Virtual Modular Synthesizer)
  - [Download](https://github.com/BespokeSynth/BespokeSynth/releases) recent BespokeSynth build
  - Extract "Release" folder from archive and rename it to "BespokeSynth"
  - Download [BespokeSynth-portable.sh] and drop it in ~/.opt/BespokeSynth directory and make it executable
