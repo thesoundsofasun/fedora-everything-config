@@ -14,7 +14,7 @@ sudo dnf install Carla Carla-vst
 #### - 🟪 BespokeSynth (Virtual Modular Synthesizer)
  - [Download](https://github.com/BespokeSynth/BespokeSynth/releases) recent BespokeSynth build
  - Extract "Release" folder from archive and rename it to "BespokeSynth"
- - Download [BespokeSynth-portable.sh] and drop it in ~/.opt/BespokeSynth directory and make it executable
+ - Download [BespokeSynth-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/BespokeSynth/BespokeSynth-portable.sh) and drop it in ~/.opt/BespokeSynth directory and make it executable
    ```
    chmod +x ~/.opt/BespokeSynth/BespokeSynth-portable.sh
    ``` 
