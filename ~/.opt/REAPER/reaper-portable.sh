@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-# Save the real home path so we can launch REAPER later
+# Dynamically find the folder where this script is currently located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Save the real home path for mapping
 REAL_HOME="$HOME"
 
 # The location where plugins should think $HOME is
@@ -25,4 +28,4 @@ export HOME="$FAKE_HOME"
 # Launch REAPER
 # - Gives access to the entire host system natively (no bwrap needed)
 # - Plugins see the new $HOME variable and write their clutter into the fake home
-exec "$REAL_HOME/.opt/REAPER/reaper" "$@"
+exec "$SCRIPT_DIR/reaper" -cfgfile "$SCRIPT_DIR/reaper.ini" "$@"
