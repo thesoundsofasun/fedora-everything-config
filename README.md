@@ -205,10 +205,10 @@ sudo dnf install qview
 #### - 🟪 Reaper (DAW)
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
  - Extract "REAPER" folder from downloaded archive into ~/.opt
- - Make REAPER fully Portable
+ - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory and make it executable
    ```
-   ~/.opt/REAPER/reaper -cfgfile ~/.opt/REAPER/reaper.ini
-   ```
+   chmod +x ~/.opt/REAPER/reaper-portable.sh
+   ``` 
  - Download [REAPER.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/REAPER.png) desktop icon and drop it in ~/.local/share/icons directory
  - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
@@ -226,10 +226,6 @@ sudo dnf install qview
  - Create directories for vst plugins
    ```
    mkdir -p ~/.vst/home/plugins/.vst3
-   ```
- - Download [reaper-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/REAPER/reaper-portable.sh) and drop it in ~/.opt/REAPER directory and make it executable
-   ```
-   chmod +x ~/.opt/REAPER/reaper-portable.sh
    ```
 #### - Yabridge Portable Environment Setup
 - Install wine packages
