@@ -138,10 +138,24 @@ sudo dnf install fastfetch
 ```
 sudo dnf install genisoimage
 ```
-- Usage
+- Usage:
   ```
   genisoimage -o output_image.iso /path/to/directory
   ```
+#### - LM Sensors
+```
+sudo dnf install lm_sensors
+```
+- Usage:
+  - Scan the hardware
+    ```
+    sudo sensors-detect
+    ```
+  - Monitor temperatures in real time
+    ```
+    sensors
+    watch -n 1 sensors
+    ```
 #### - 🟩 Micro (Terminal Text Editor)
 ```
 sudo dnf install micro
@@ -149,6 +163,10 @@ sudo dnf install micro
 #### - 🟩 Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
   ``` 
   sudo dnf install pipewire-utils
+  ```
+#### - 🟩 Tar (CLI Archive Manager)
+  ```
+  sudo dnf install tar
   ```
 ## Graphics
 #### - 🟩 Blender (3D Redactor)
@@ -292,7 +310,7 @@ sudo dnf install qview
 sudo dnf install kate
 ```
 ## Utilities
-#### - 🟩 Ark (Archivator)
+#### - 🟩 Ark (Archive Manager)
 ```
 sudo dnf install ark
 ```
