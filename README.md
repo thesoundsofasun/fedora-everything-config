@@ -283,6 +283,10 @@ sudo dnf install qview
   ```
  #### - 🟪 VCV Rack (Virtual Modular Synthesizer)
  - [INSTALL](https://vcvrack.com/Rack) VCV Rack 2 from the official web-site
+ - Install Zenity package
+   ```
+   sudo dnf install zenity
+   ```
  - Extract "Rack2Free" folder from downloaded archive into ~/.opt
  - Download [rack-portable.sh](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.opt/Rack2Free/rack-portable.sh) and drop it in ~/.opt/Rack2Free directory and make it executable
      ```
@@ -293,7 +297,6 @@ sudo dnf install qview
    ```
    chmod +x ~/.local/share/applications/Rack2.desktop
    ```
- - [Download VCV Rack Modules](https://drive.google.com/file/d/10dWvAFvnl0i-1tTi9Dew_FDPF6kfleE2/view?usp=sharing) and extract archive into ~/.opt/Rack2Free/Rack2 directory  
 ## Office
 #### - 🟩 OnlyOffice (Office Suite)
 - Add OnlyOffice repository
