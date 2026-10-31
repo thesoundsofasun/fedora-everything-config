@@ -1,3 +1,7 @@
+[aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="threadirqs"
+[sudo] password for aehaze: 
+[aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="mitigations=off"
+
 # Fedora Config
 #### - Boot Loader (GRUB)
 #### - File System (ext4) - 1 GiB
