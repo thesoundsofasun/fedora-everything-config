@@ -392,8 +392,9 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
   gtk-theme-name=Adwaita-dark
   gtk-application-prefer-dark-theme=true
   EOF
+  gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   ```
-  
 - #### Windows 11
 - [Download Windows 11 LTSC](https://buzzheavier.com/2gtemvaqgfm3) ISO from MAS
 - Open CMD Shift + F10 and use OOBE\BYPASSNRO command to bypass Microsoft Account login.
