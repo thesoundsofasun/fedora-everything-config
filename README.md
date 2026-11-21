@@ -1,5 +1,5 @@
-https://share.google/aimode/kls6XfjwhtQCqxAOf
-# Fedora Real-Time Audio Configuration
+[https://share.google/aimode/kls6XfjwhtQCqxAOf
+](https://www.google.com/search?q=how+to+check+my+usermod+entries+%3F&csuir=1&aep=34&kgs=efa7508b953dc76b&shem=agpl%2Caiolsbe%2Casdpe%2Casple%2Cepsd1%2Cesd2e%2Crimspwouoe%2Csdpie&shndl=37&shmd=H4sIAAAAAAAA_3WQvU7DMBDHVVhQFiRGpiMLEiIxLJVaUTFAJyggXiA97CO2GtuRP0grMVTipXgGnoMHwWlhArbTnX7_j8s-d7O3nSs0sLIRuCMMBLNrEJZHTSZgUNZAoxYEQWKAZ-uAlqjbhrbzC7kVtOhQUyCXFfBgO3IwQ4M19QrjbD6fZ8SlheOb6ePd9HYyyXkbK6GxapKd4av8FGb319NJfjYcDvNjeAUfhYVABIwCZ1HQC3OxIV8KNhoVCS8SXnzj5ea08cnQCOhRSeBTpr9CbpsYIkEC9AqCjVweXsgQWj9mrOu6svZ9c15yq5kndFwWrbPaMlS68hIdVUFG_WRQNWVr6vzgh66trRsqUbGTI2m7JA5cEl_0RtGT01ZA-opT5OFyud5fD973PgbVf-ZKpzd69uRSL2Xqb_m6qh0KlXTY-fLXrkq8EehEdT48E22f7wsctkcf5wEAAA&shmds=v1_Ac3VAoxcXbGxBb2UuI2q7_2ZGPh3TA7awjFx4tTbBQoFiWLatA&source=sh%2Fx%2Faim%2Fm1%2F1&mstk=AUtExfCQxOzs_cHRad-awxpiCENW6y5zYJjpCWeYfzYYilJxYvjbceHbsHXYY5iSBYOhJz-VHBycUfwYun5FCQiPyIy5O6pqyRTNFCdktsrQ4kXPUGEUfkDTCAqJNo34gaalXXhW7SKX_FrRZVKilgc953HpSbDAxXA7EQr32x6pv3Y43BvO4G5K2ZpQaHrompxv2UcoheqZMSlYeQJCP7WcKTeaNi3zaGnO2ne7NzncKTK2ms4a6_ls1IT48Dh-jTkQUdyEOsaC9MZtTSr1_UpilcK_JWUq2wjP5cE&udm=50)# Fedora Real-Time Audio Configuration
 
 - **Group Limits & RT Priorities (`audio` group + PAM limits):**
   ```bash
