@@ -1,3 +1,4 @@
+https://share.google/aimode/kls6XfjwhtQCqxAOf
 # Fedora Real-Time Audio Configuration
 
 - **Group Limits & RT Priorities (`audio` group + PAM limits):**
