@@ -1,15 +1,19 @@
 # Fedora Config
 #### - Boot Loader (GRUB)
 #### - File System (ext4) - 1 GiB
+#### - Change the name of the desktop:
+```
+sudo hostnamectl set hostname fedora
+```
 --------------------------------------------------------------------------  
 ## Desktop Environment (KDE Plasma)
-| Desktop | Login Manager | File Explorer | Admin Rights | Screen Manager | Network Manager | Audio Manager for Pipewire |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 Kio Admin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA |
+| Desktop | Login Manager | File Explorer | Admin Rights | Screen Manager | Network Manager | Audio Manager for Pipewire | GTK Application Style |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 🟩 Plasma Desktop | 🟩 Plasma Login Manager | 🟩 Dolphin | 🟩 Kio Admin | 🟩 KScreen | 🟩 PlasmaNM | 🟩 PlasmaPA | 🟩 KDE GTK Config |
 
-#### - Install core KDE Plasma packages:
+#### - Install KDE Plasma packages:
 ```
-sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen plasma-nm plasma-pa
+sudo dnf install plasma-desktop plasma-login-manager dolphin kio-admin kscreen plasma-nm plasma-pa kde-gtk-config
 ```
 #### - Enable KDE Plasma:
 ```
