@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Audio;Video;AudioVideo;AudioVideoEditing;Recorder;
+Comment[en_US]=REAPER
+Comment=REAPER
+Encoding=UTF-8
+Exec=/home/aehaze/.opt/REAPER/reaper-portable.sh %F
+GenericName[en_US]=
+GenericName=
+Icon=/home/aehaze/.local/share/icons/REAPER.png
+MimeType=
+Name[en_US]=REAPER
+Name=REAPER
+Path=
+StartupNotify=true
+StartupWMClass=REAPER
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
