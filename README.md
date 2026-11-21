@@ -1,3 +1,64 @@
+# Fedora Real-Time Audio Configuration
+
+- **Group Limits & RT Priorities (`audio` group + PAM limits):**
+  ```bash
+  sudo usermod -aG audio \$USER
+  printf '@audio - rtprio 95\n@audio - memlock unlimited\n' | sudo tee /etc/security/limits.d/99-audio.conf
+  ```
+
+- **Preempt RT (Threaded IRQs):**
+  ```bash
+  sudo grubby --update-kernel=ALL --args="threadirqs"
+  ```
+
+- **Spectre/Meltdown Mitigations:**
+  ```bash
+  sudo grubby --update-kernel=ALL --args="mitigations=off"
+  ```
+
+- **Power Management (CPU DMA Latency):**
+  ```bash
+  echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
+  ```
+
+- **CPU Frequency Scaling (`performance` governor):**
+  ```bash
+  echo 'echo -n performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor' | sudo tee /usr/local/bin/rt-audio-setup
+  sudo chmod +x /usr/local/bin/rt-audio-setup
+  sudo tee /etc/systemd/system/rt-audio-setup.service << 'EOF'
+  [Unit]
+  Description=Prepare system for real-time audio
+
+  [Service]
+  Type=oneshot
+  ExecStart=/bin/bash /usr/local/bin/rt-audio-setup
+  RemainAfterExit=yes
+
+  [Install]
+  WantedBy=multi-user.target
+  EOF
+  sudo systemctl enable --now rt-audio-setup
+  ```
+  *(Note: If you set this in BIOS instead, no systemd service is needed.)*
+
+- **Simultaneous Multithreading (Disable SMT / Hyper-Threading):**
+  ```bash
+  sudo grubby --update-kernel=ALL --args="nosmt"
+  ```
+  *(Note: If you disabled SMT in BIOS instead, skip this boot argument.)*
+
+- **Swappiness (`vm.swappiness = 10`):**
+  ```bash
+  echo 'vm.swappiness = 10' | sudo tee /etc/sysctl.d/99-audio-swappiness.conf
+  sudo sysctl --system
+  ```
+
+- **Apply & Verify (After Reboot):**
+  ```bash
+  ulimit -r -l
+  ~/Downloads/rtcqs/src/rtcqs/rtcqs.py
+  ```
+
 [aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="threadirqs"
 [sudo] password for aehaze: 
 [aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="mitigations=off"
