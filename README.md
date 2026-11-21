@@ -142,7 +142,7 @@ sudo dnf install fastfetch
   ```
 - Edit [Fastfetch config](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.config/fastfetch/config.jsong) 
   ```
-  micro ~/.config/fastfetch/config.jsonc
+  nano ~/.config/fastfetch/config.jsonc
   ```
 #### - 🟩 Genisoimage (ISO Imaging Software)
 ```
