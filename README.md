@@ -35,7 +35,7 @@ sudo systemctl enable plasmalogin
   ```
 - Edit grub configuration file
   ```
-  sudo micro /etc/default/grub
+  sudo nano /etc/default/grub
   ```
 - Copy and paste config from [grub](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/default/grub)
 - Rebuild the GRUB Configuration
@@ -45,7 +45,7 @@ sudo systemctl enable plasmalogin
 #### - Disable core dumps (/var/lib/systemd/coredump/)
 - Create and edit coredump.conf file in /etc/systemd (activates after restart)
   ```
-  sudo micro /etc/systemd/coredump.conf
+  sudo nano /etc/systemd/coredump.conf
   ```
 - Copy and paste config from [coredump.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/coredump.conf)
 - Restart to apply changes
@@ -55,7 +55,7 @@ sudo systemctl enable plasmalogin
 #### - Limit journald disk usage to 250 mbs
 - Create and edit journald.conf file in /etc/systemd (activates after restart)
   ```
-  sudo micro /etc/systemd/journald.conf
+  sudo nano /etc/systemd/journald.conf
   ```
 - Copy and paste config from [journald.conf](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/etc/systemd/journald.conf)
 - Restart to apply changes
@@ -65,7 +65,7 @@ sudo systemctl enable plasmalogin
 #### - Process Optimization
 - Disable kwallet background process by changing [kwallet configuration](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.config/kwalletrc)
   ```
-  micro ~/.config/kwallet.rc
+  nano ~/.config/kwallet.rc
   ```
 - Remove speech-dispatcher (Screen Reader)
   ```
