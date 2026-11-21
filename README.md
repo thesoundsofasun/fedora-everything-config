@@ -79,10 +79,8 @@ sudo systemctl enable plasmalogin
 |🟦|Flatpak Packages|
 |🟪|Standalone Binaries|
 #### - DNF
-- Add RPM Fusion Repository (free and nonfree)
-  ```
-  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release- $(rpm -E %fedora).noarch.rpm
-  ```
+- [Add RPM Fusion Repository (free and nonfree)](https://rpmfusion.org/Configuration)
+
 #### - 🟩 Flatpak
 - Install Flatpak
   ```
@@ -108,6 +106,10 @@ sudo systemctl enable plasmalogin
 - Remove unused Flatpak runtimes
   ```
   flatpak uninstall --unused
+  ```
+- Remove Flatpak user data  
+  ```
+  flatpak uninstall --unused --delete-data
   ```
 - Repair Flatpak installations
   ```
@@ -164,10 +166,6 @@ sudo dnf install lm_sensors
     sensors
     watch -n 1 sensors
     ```
-#### - 🟩 Micro (Terminal Text Editor)
-```
-sudo dnf install micro
-```  
 #### - 🟩 Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
   ``` 
   sudo dnf install pipewire-utils
