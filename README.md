@@ -249,7 +249,7 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
    chmod +x ~/.opt/REAPER/reaper-portable.sh
    ``` 
  - Download [REAPER.png](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/REAPER.png) desktop icon and drop it in ~/.local/share/icons directory
- - Download [REAPER.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
+ - Download [cockos-reaper.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/REAPER.desktop) and drop it in ~/.local/share/applications directory and make it executable
    ```
    chmod +x ~/.local/share/applications/REAPER.desktop
    ```
