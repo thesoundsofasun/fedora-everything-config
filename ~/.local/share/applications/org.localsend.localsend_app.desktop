@@ -12,7 +12,6 @@ StartupNotify=false
 Terminal=false
 TerminalOptions=
 Type=Application
-X-Desktop-File-Install-Version=0.28
 X-Flatpak=org.localsend.localsend_app
 X-KDE-SubstituteUID=false
 X-KDE-Username=
