@@ -253,14 +253,6 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
    ```
    chmod +x ~/.local/share/applications/REAPER.desktop
    ```
- - Add $USER to an "audio" group 
-   ```
-   sudo usermod -aG audio $USER
-   ```
- - Prevent CPU Sleep for Low-Latency Audio (udev rule) (works after reboot !!!)
-   ```
-   echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
-   ```
 #### - VST Plugin Portable Environment Setup
  - Create directories for vst plugins
    ```
