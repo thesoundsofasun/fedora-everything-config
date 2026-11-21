@@ -1,68 +1,3 @@
-https://share.google/aimode/tEdgX1kD6x7wG9BOB
-
-- **Group Limits & RT Priorities (`audio` group + PAM limits):**
-  ```bash
-  sudo usermod -aG audio \$USER
-  printf '@audio - rtprio 95\n@audio - memlock unlimited\n' | sudo tee /etc/security/limits.d/99-audio.conf
-  ```
-
-- **Preempt RT (Threaded IRQs):**
-  ```bash
-  sudo grubby --update-kernel=ALL --args="threadirqs"
-  ```
-
-- **Spectre/Meltdown Mitigations:**
-  ```bash
-  sudo grubby --update-kernel=ALL --args="mitigations=off"
-  ```
-
-- **Power Management (CPU DMA Latency):**
-  ```bash
-  echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
-  ```
-
-- **CPU Frequency Scaling (`performance` governor):**
-  ```bash
-  echo 'echo -n performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor' | sudo tee /usr/local/bin/rt-audio-setup
-  sudo chmod +x /usr/local/bin/rt-audio-setup
-  sudo tee /etc/systemd/system/rt-audio-setup.service << 'EOF'
-  [Unit]
-  Description=Prepare system for real-time audio
-
-  [Service]
-  Type=oneshot
-  ExecStart=/bin/bash /usr/local/bin/rt-audio-setup
-  RemainAfterExit=yes
-
-  [Install]
-  WantedBy=multi-user.target
-  EOF
-  sudo systemctl enable --now rt-audio-setup
-  ```
-  *(Note: If you set this in BIOS instead, no systemd service is needed.)*
-
-- **Simultaneous Multithreading (Disable SMT / Hyper-Threading):**
-  ```bash
-  sudo grubby --update-kernel=ALL --args="nosmt"
-  ```
-  *(Note: If you disabled SMT in BIOS instead, skip this boot argument.)*
-
-- **Swappiness (`vm.swappiness = 10`):**
-  ```bash
-  echo 'vm.swappiness = 10' | sudo tee /etc/sysctl.d/99-audio-swappiness.conf
-  sudo sysctl --system
-  ```
-
-- **Apply & Verify (After Reboot):**
-  ```bash
-  ulimit -r -l
-  ~/Downloads/rtcqs/src/rtcqs/rtcqs.py
-  ```
-
-[aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="threadirqs"
-[sudo] password for aehaze: 
-[aehaze@fedora ~]$ sudo grubby --update-kernel=ALL --args="mitigations=off"
-
 # Fedora Config
 #### - Boot Loader (GRUB)
 #### - File System (ext4) - 1 GiB
@@ -281,6 +216,23 @@ sudo dnf install qview
   sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
   ```
 ## Music Production
+#### - Real-Time Kernel Audio System Configuration:
+Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** terminal script to check kernel configurations
+ - Fix Group Limits & RT Priorities:
+   ```
+   sudo usermod -a -G audio $USER
+   printf '@audio - rtprio 95\n@audio - memlock unlimited\n' | sudo tee /etc/security/limits.d/99-audio.conf
+   ```
+ - Fix Preempt RT & Spectre/Meltdown Mitigations
+   ```
+   sudo grubby --update-kernel=ALL --args="threadirqs preempt=full mitigations=off"
+   ```
+ - Fix Power Management (/dev/cpu_dma_latency)
+   ```
+   echo 'KERNEL=="cpu_dma_latency", MODE="0666"' | sudo tee /etc/udev/rules.d/99-cpu-dma-latency.rules
+   ```
+ - Reboot to apply changes
+ 
 #### - 🟪 Cardinal (Virtual Modular Synthesizer)
  - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
  - Extract "Cardinal" folder from downloaded archive into ~/.opt
