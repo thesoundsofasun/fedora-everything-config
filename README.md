@@ -88,6 +88,10 @@ sudo systemctl enable plasmalogin
   ```
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   ```
+- Enable Flathub Repository for user folder
+  ```
+  flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  ```  
 #### - Manage Packages
 - Remove unused DNF dependencies
   ```
