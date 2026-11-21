@@ -179,7 +179,7 @@ sudo dnf install lm_sensors
 ```
 sudo dnf install blender
 ```
-#### - 🟩 GIMP (Image Editor)
+#### - 🟩 GIMP (Image Editor) (Will be replaced with Photocraft)
 ```
 sudo dnf install gimp
 ```
@@ -188,11 +188,11 @@ sudo dnf install gimp
    ```
    chmod +x ~/.local/share/applications/org.gimp.GIMP.desktop
    ```
-#### - 🟩 G'MIC (GIMP Plugin and Standalone versions) (Image Filters)
+#### - 🟩 G'MIC (GIMP Plugin and Standalone versions) (Image Filters) (Will be removed)
 ```
 sudo dnf install gmic-gimp
 ```
-#### - 🟩 Inkscape (Vector Graphics)
+#### - 🟩 Inkscape (Vector Graphics) (Will be replaced with Vectorcraft)
 ```
 sudo dnf install inkscape
 ```
@@ -202,25 +202,11 @@ sudo dnf install inkscape
 sudo dnf install firefox
 ```
 ## Multimedia
-#### - 🟩 qView (Image Viewer)
+#### - 🟩 Gwenview (Image Viewer)
 ```
-sudo dnf install qview
+sudo dnf install gwenview
 ```
-#### - 🟦 MPV (Media Player)
-- Install MPV Media Player from Flathub
-  ```
-  flatpak install flathub io.mpv.Mpv -y
-  ```
-- Install 🟩 FluidSynth for MIDI playback support
-  ```
-  sudo dnf install fluidsynth
-  ```
-- [DOWNLOAD](https://github.com/thesoundsofasun/mpv-custom-build/releases/download/latest/mpv-player-config-linux.zip) config files
-- Extract archive and drop files and folders from the "config" folder in ~/.var/app/io.mpv.Mpv/config/mpv/ directory
-- Allow MPV to interact with desktop:
-  ```
-  sudo flatpak override io.mpv.Mpv --talk-name=org.freedesktop.Flatpak
-  ```
+
 ## Music Production
 #### - Real-Time Kernel Audio System Configuration:
 Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** terminal script to check kernel configurations
@@ -239,14 +225,7 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
    ```
  - Reboot to apply changes
  
-#### - 🟪 Cardinal (Virtual Modular Synthesizer)
- - [INSTALL](https://github.com/DISTRHO/Cardinal/releases) Cardinal from the official github repository
- - Extract "Cardinal" folder from downloaded archive into ~/.opt
- - Download [Cardinal.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/Cardinal.svg) desktop icon and drop it in ~/.local/share/icons directory   
- - Download [Cardinal.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/Cardinal.desktop) and drop it in ~/.local/share/applications/ directory and make it executable
-   ```
-   chmod +x ~/.local/share/applications/Cardinal.desktop
-   ```
+
 #### - 🟪 Reaper (DAW)
  - [INSTALL](https://www.reaper.fm/) Reaper from the official web-site
  - Extract "REAPER" folder from downloaded archive into ~/.opt
@@ -313,7 +292,7 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
    chmod +x ~/.local/share/applications/Rack2.desktop
    ```
 ## Office
-#### - 🟩 OnlyOffice (Office Suite)
+#### - 🟩 OnlyOffice (Office Suite) (Will be replaced by Artcraft Office apps)
 - Add OnlyOffice repository
   ```
   sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
@@ -323,18 +302,14 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
   sudo dnf install onlyoffice-desktopeditors -y
   ```
 ## Text Editors
-#### - 🟩 Kate (GUI Text Editor)
+#### - 🟩 KWrite (GUI Text Editor)
 ```
-sudo dnf install kate
+sudo dnf install kwrite
 ```
 ## Utilities
 #### - 🟩 Ark (Archive Manager)
 ```
 sudo dnf install ark
-```
-#### - 🟦 Flatseal (Flatpak permission manager)
-```
-flatpak install flathub com.github.tchx84.Flatseal
 ```
 #### - 🟦 Local Send (File Sharing) (Flatpak (Flathub))
 ```
@@ -355,10 +330,6 @@ sudo dnf install keepassxc
 #### - 🟩 Konsole (Terminal Emulator)
 ```
 sudo dnf install konsole
-```
-#### - 🟩 OBS Studio (Screen Recorder)
-```
-sudo dnf install obs
 ```
 #### - 🟩 qBittorrent (Torrent Downloader)
 ```
