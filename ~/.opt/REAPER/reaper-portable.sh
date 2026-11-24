@@ -11,6 +11,7 @@ REAL_HOME="$HOME"
 FAKE_HOME="$HOME/.vst/home/plugins"
 
 export FONTCONFIG_FILE="$SCRIPT_DIR/fonts.conf"
+export FONTCONFIG_PATH="/etc/fonts"
 
 # Ensure X11 UI apps don't lose authentication when we change the HOME variable
 export XAUTHORITY="${XAUTHORITY:-$REAL_HOME/.Xauthority}"
