@@ -202,6 +202,14 @@ sudo dnf install inkscape
 sudo dnf install firefox
 ```
 ## Multimedia
+#### - Dragon Player (Video Player)
+```
+sudo dnf install dragon
+```
+#### - Elisa (Music Player)
+```
+sudo dnf install elisa
+```
 #### - 🟩 Gwenview (Image Viewer)
 ```
 sudo dnf install gwenview
