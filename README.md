@@ -323,13 +323,17 @@ sudo dnf install ark
 ```
 flatpak install flathub org.localsend.localsend_app
 ```
+- Download [LocalSend.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/LocalSend.svg) desktop icon and drop it in ~/.local/share/icons directory
+- Download [org.localsend.localsend_app.desktop](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/applications/org.localsend.localsend_app.desktop) and drop it in ~/.local/share/applications directory and make it executable
+   ```
+   chmod +x ~/.local/share/applications/org.localsend.localsend_app.desktop
+   ```
 - Open Firewall ports for 53317/tcp and 53317/udp
   ```
   sudo firewall-cmd --permanent --add-port=53317/udp
   sudo firewall-cmd --permanent --add-port=53317/tcp
   sudo firewall-cmd --reload
   ```
-- Download [LocalSend.svg](https://github.com/thesoundsofasun/fedora-everything-config/blob/main/~/.local/share/icons/LocalSend.svg) desktop icon and drop it in ~/.local/share/icons directory
 
 #### - 🟩 KeePassXC - (Password manager)
 ```
