@@ -241,7 +241,7 @@ Download [rtcqs](https://codeberg.org/rtcqs/rtcqs) and launch **rtcqs.py** termi
    ```
    mkdir -p ~/.vst/home/plugins/.vst3
    ```
-#### - Yabridge Portable Environment Setup
+#### - Yabridge Portable Environment Setup (experimental)
 - Install wine packages
   ```
   sudo dnf install wine wine-mono winetricks
