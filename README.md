@@ -132,6 +132,10 @@ sudo dnf install libheif-freeworld qt-heif-image-plugin
   ```
 --------------------------------------------------------------------------
 ## CLI Tools
+#### - 🟩 btop++ (System Resource Monitoring)
+```
+sudo dnf install btop
+```
 #### - 🟩 Fastfetch (System Information)
 ```
 sudo dnf install fastfetch
@@ -152,20 +156,6 @@ sudo dnf install genisoimage
   ```
   genisoimage -o output_image.iso /path/to/directory
   ```
-#### - LM Sensors
-```
-sudo dnf install lm_sensors
-```
-- Usage:
-  - Scan the hardware
-    ```
-    sudo sensors-detect
-    ```
-  - Monitor temperatures in real time
-    ```
-    sensors
-    watch -n 1 sensors
-    ```
 #### - 🟩 Pipewire Utilities (Pipewire Sample Rate and Buffer Size Manager) ([KDE UI Widget to manage it](https://github.com/magillos/Pipewire-Settings-Widget-for-Plasma-6))
   ``` 
   sudo dnf install pipewire-utils
@@ -202,11 +192,11 @@ sudo dnf install inkscape
 sudo dnf install firefox
 ```
 ## Multimedia
-#### - Dragon Player (Video Player)
+#### - 🟩 Dragon Player (Video Player)
 ```
 sudo dnf install dragon
 ```
-#### - Elisa (Music Player)
+#### - 🟩 Elisa (Music Player)
 ```
 sudo dnf install elisa
 ```
@@ -355,10 +345,6 @@ sudo dnf install qpwgraph
 ```
 sudo dnf install spectacle
 ```
-#### - 🟩 System Monitor (System Resource Monitoring)
-```
-sudo dnf install plasma-systemmonitor
-```
 ## Virtualization
 | Hypervisor Core | Daemon Controller | CLI Client | Desktop GUI Manager | VM Provisioning Tool | Virtual Screen Viewer |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -377,17 +363,6 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
 - Reload terminal groups to apply changes
   ```
   newgrp libvirt
-  ```
-- Set Virtual Machine Manager to dark mode
-  ```
-  rm -f "$HOME/.config/gtk-3.0/settings.ini"
-  cat << EOF > "$HOME/.config/gtk-3.0/settings.ini"
-  [Settings]
-  gtk-theme-name=Adwaita-dark
-  gtk-application-prefer-dark-theme=true
-  EOF
-  gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
-  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   ```
 - #### Windows 11
 - [Download Windows 11 LTSC](https://buzzheavier.com/2gtemvaqgfm3) ISO from MAS
@@ -415,6 +390,30 @@ sudo dnf install qemu-kvm libvirt-daemon-kvm libvirt-client virt-manager virt-in
     ```
 - Turn on QEMU Guest Agent, Spice VDAgent and VirtIO-FS services and set them in automatic mode in services.msc menu
 
+#### Guide to move Virtual machines to another Linux based OS.
+
+- **Copy `.qcow2` files from old machine** into `/var/lib/libvirt/images/`.
+- **Merge/flatten snapshots** into a single `.qcow2` file:
+   ```
+   sudo qemu-img convert -p -f qcow2 -O qcow2 "/var/lib/libvirt/images/<top-snapshot>.qcow2" /var/lib/libvirt/images/<VM_NAME>.qcow2
+   ```
+- **Copy NVRAM and `swtpm` state:**
+  - * Copy `<VM_NAME>_VARS.qcow2` into `/var/lib/libvirt/qemu/nvram/`
+  - * Copy `swtpm` UUID folder contents into `/var/lib/libvirt/swtpm/` (`sudo cp -a /old/var/lib/libvirt/swtpm/. /var/lib/libvirt/swtpm/`)
+
+- **Edit and define the domain XML:**
+  - * Copy `<VM_NAME>.xml` to `/tmp/<VM_NAME>.xml`.
+  - * Inside `<disk type='file' device='disk'>`, remove the `<backingStore>...</backingStore>` block and update `<source file='...'/>` to `/var/lib/libvirt/images/<VM_NAME>.qcow2`.
+  - * Define the VM (this automatically places the managed XML into `/etc/libvirt/qemu/`):
+    ```
+     sudo virsh define /tmp/<VM_NAME>.xml
+
+    ```
+- **Restore SELinux labels (Fedora):**
+    ```
+    sudo restorecon -Rv /var/lib/libvirt/
+ 
+    ```
 --------------------------------------------------------------------------
 ## Custom bash Scripts
 #### Find all files in "/" directory except system ones
