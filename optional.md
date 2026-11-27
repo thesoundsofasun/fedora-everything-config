@@ -1,3 +1,18 @@
+## CLI Tools
+#### - LM Sensors
+```
+sudo dnf install lm_sensors
+```
+- Usage:
+  - Scan the hardware
+    ```
+    sudo sensors-detect
+    ```
+  - Monitor temperatures in real time
+    ```
+    sensors
+    watch -n 1 sensors
+    ```
 ## Multimedia
 #### - 🟦 MPV (Media Player)
 - Install MPV Media Player from Flathub
@@ -71,4 +86,8 @@ flatpak install flathub com.github.tchx84.Flatseal
 #### - 🟩 OBS Studio (Screen Recorder)
 ```
 sudo dnf install obs
-``` 
+```
+#### - 🟩 System Monitor (System Resource Monitoring)
+```
+sudo dnf install plasma-systemmonitor
+```
